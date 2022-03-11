@@ -4,3 +4,8 @@
 
 body {
   width: 100%; }
+
+nav {
+  color: black; }
+  nav .LogoContainer {
+    background-color: aqua; }
