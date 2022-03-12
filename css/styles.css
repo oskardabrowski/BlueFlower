@@ -1,11 +1,95 @@
-* {
-  margin: 0;
-  padding: 0; }
-
 body {
-  width: 100%; }
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Ubuntu"; }
+
+.button-style {
+  background-color: #248ed9;
+  padding: 0.75rem;
+  font-family: "Open Sans";
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out; }
+  .button-style:hover {
+    cursor: pointer;
+    color: #248ed9;
+    background-color: black; }
 
 nav {
-  color: black; }
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%; }
   nav .LogoContainer {
-    background-color: aqua; }
+    margin: 0.5rem;
+    width: 15rem;
+    height: 5rem; }
+  nav .MenuButton {
+    padding: 0.5rem;
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 0px 0px 0px 15px; }
+    nav .MenuButton:hover {
+      cursor: pointer; }
+
+.head {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative; }
+  .head .left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #248ed9; }
+    .head .left-htop {
+      margin-right: 2.5rem;
+      margin-bottom: 0.5rem; }
+    .head .left-hbottom {
+      margin-top: 0rem;
+      margin-left: 4rem; }
+  .head .right {
+    width: 60%; }
+    .head .right-back {
+      justify-self: center;
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translate(0%, -50%);
+      width: 20rem;
+      z-index: 20; }
+      .head .right-back > img {
+        width: 100%; }
+    .head .right-top {
+      position: relative;
+      justify-self: center;
+      width: 80%;
+      top: 50%;
+      left: 60%;
+      transform: translate(-60%, -50%); }
+      .head .right-top > img {
+        width: 100%; }
+  .head .Circle1 {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%); }
+  .head .Circle2 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%); }

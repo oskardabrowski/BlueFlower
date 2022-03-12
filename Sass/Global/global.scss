@@ -1,8 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Ubuntu";
+}
+
+.button-style {
+  background-color: #248ed9;
+  padding: 0.75rem;
+  font-family: "Open Sans";
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: #248ed9;
+    background-color: black;
+  }
 }
