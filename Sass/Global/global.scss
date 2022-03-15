@@ -1,9 +1,10 @@
 body {
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0;
   color: black;
   font-family: "Ubuntu";
+  overflow-x: hidden;
 }
 
 .button-style {
@@ -20,4 +21,27 @@ body {
     color: #248ed9;
     background-color: black;
   }
+}
+
+.header-style {
+  font-size: 2rem;
+  font-family: "Ubuntu";
+  background: linear-gradient(to top right, #248ed9, #046fbb);
+  width: max-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: #248ed9;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #046fbb;
 }

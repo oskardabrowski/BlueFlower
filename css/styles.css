@@ -1,9 +1,10 @@
 body {
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0;
   color: black;
-  font-family: "Ubuntu"; }
+  font-family: "Ubuntu";
+  overflow-x: hidden; }
 
 .button-style {
   background-color: #248ed9;
@@ -17,6 +18,27 @@ body {
     cursor: pointer;
     color: #248ed9;
     background-color: black; }
+
+.header-style {
+  font-size: 2rem;
+  font-family: "Ubuntu";
+  background: linear-gradient(to top right, #248ed9, #046fbb);
+  width: max-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+::-webkit-scrollbar {
+  width: 0.75rem; }
+
+::-webkit-scrollbar-track {
+  background: white; }
+
+::-webkit-scrollbar-thumb {
+  background: #248ed9;
+  border-radius: 15px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #046fbb; }
 
 nav {
   display: flex;
@@ -39,6 +61,23 @@ nav {
     border-radius: 0px 0px 0px 15px; }
     nav .MenuButton:hover {
       cursor: pointer; }
+
+.items {
+  width: 100vw; }
+  .items-headerdiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .items-container {
+    width: 100%;
+    text-align: center; }
+    .items-container-item {
+      width: 20rem;
+      height: 20rem;
+      margin: 1rem;
+      background-color: red;
+      display: inline-block; }
 
 .head {
   width: 100vw;

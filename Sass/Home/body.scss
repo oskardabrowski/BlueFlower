@@ -1,0 +1,23 @@
+.items {
+  width: 100vw;
+
+  &-headerdiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-container {
+    width: 100%;
+    text-align: center;
+
+    &-item {
+      width: 20rem;
+      height: 20rem;
+      margin: 1rem;
+      background-color: red;
+      display: inline-block;
+    }
+  }
+}
