@@ -78,44 +78,133 @@ nav {
       height: 35rem;
       margin: 1rem;
       background-color: white;
-      display: inline-block;
-      overflow: hidden;
-      position: relative;
-      border-radius: 15px;
-      box-shadow: 0.5rem 0.25rem 1.5rem rgba(0, 0, 0, 0.5); }
+      display: inline-block; }
       .items-container-item:hover {
         cursor: pointer; }
-      .items-container-item-title {
-        position: absolute;
-        top: 35%;
-        width: 20rem;
-        padding: 0.5rem;
-        clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%); }
-        .items-container-item-title > h2 {
-          font-size: 1.2rem;
-          font-family: "Ubuntu";
-          font-weight: 500; }
-      .items-container-item-desc {
-        margin-top: 4rem;
-        padding: 0rem 1rem;
-        text-align: justify; }
-      .items-container-item-image {
+        .items-container-item:hover .items-container-item-rotate {
+          transform: rotateY(180deg); }
+      .items-container-item-rotate {
+        position: relative;
         width: 100%;
-        height: 40%; }
-        .items-container-item-image > img {
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d; }
+        .items-container-item-rotate-front {
+          overflow: hidden;
+          box-shadow: 0.5rem 0.25rem 1.5rem rgba(0, 0, 0, 0.5);
+          border-radius: 15px;
+          position: absolute;
           width: 100%;
-          height: 100%; }
-      .items-container-item-footer {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 0.5rem;
-        font-size: 1.2rem;
-        background-color: white;
-        border-radius: 15px 0px 0px 0px; }
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          background-color: white;
+          z-index: 1000; }
+          .items-container-item-rotate-front-title {
+            position: absolute;
+            top: 35%;
+            width: 20rem;
+            padding: 0.5rem;
+            clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%); }
+            .items-container-item-rotate-front-title > h2 {
+              font-size: 1.2rem;
+              font-family: "Ubuntu";
+              font-weight: 500; }
+          .items-container-item-rotate-front-desc {
+            margin-top: 4rem;
+            padding: 0rem 1rem;
+            text-align: justify; }
+          .items-container-item-rotate-front-image {
+            width: 100%;
+            height: 40%; }
+            .items-container-item-rotate-front-image > img {
+              width: 100%;
+              height: 100%; }
+          .items-container-item-rotate-front-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            background-color: white;
+            width: 100%; }
+        .items-container-item-rotate-back {
+          position: absolute;
+          overflow: hidden;
+          border-radius: 15px;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          box-shadow: 0.5rem 0.25rem 1.5rem rgba(0, 0, 0, 0.5);
+          background-color: white;
+          transform: rotateY(180deg);
+          z-index: 500; }
+          .items-container-item-rotate-back-contact {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; }
+            .items-container-item-rotate-back-contact-method {
+              margin: 0.5rem 0rem; }
+              .items-container-item-rotate-back-contact-method > i {
+                margin-right: 0.5rem; }
+            .items-container-item-rotate-back-contact-header {
+              font-size: 1.2rem;
+              font-weight: 400;
+              margin-bottom: 1rem; }
+          .items-container-item-rotate-back-content {
+            padding: 0rem 1rem;
+            text-align: justify;
+            font-size: 0.9rem; }
+          .items-container-item-rotate-back-photo {
+            width: 100%;
+            height: 40%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; }
+            .items-container-item-rotate-back-photo-username {
+              margin-top: 0.75rem;
+              font-size: 1.2rem;
+              font-weight: 400; }
+            .items-container-item-rotate-back-photo-container {
+              width: 8rem;
+              height: 8rem;
+              position: relative;
+              border-radius: 50%;
+              overflow: hidden;
+              border: 5px solid #248ed9; }
+              .items-container-item-rotate-back-photo-container > img {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 8rem; }
 
-.gold-background {
+.other-background {
   background: linear-gradient(to top right, #ffe57f, #ffbb00); }
+
+.other-path {
+  clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%); }
+
+.cars-background {
+  background: linear-gradient(to top right, #e22d2d, #ac0000); }
+
+.cars-path {
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); }
+
+.crypto-background {
+  background: linear-gradient(to top right, #45e936, #149708); }
+
+.crypto-path {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); }
+
+.soft-background {
+  background: linear-gradient(to top right, #36a7e9, #0573b3); }
+
+.soft-path {
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%); }
 
 .head {
   width: 100vw;
