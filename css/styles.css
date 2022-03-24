@@ -40,16 +40,56 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #046fbb; }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 17.5rem;
+  background-image: url("../../img/wave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-size: 1.2rem; }
+    .footer-container-media {
+      display: flex;
+      flex-direction: row; }
+      .footer-container-media > div > ul {
+        list-style-type: none; }
+        .footer-container-media > div > ul > li > i {
+          margin-right: 0.5rem; }
+        .footer-container-media > div > ul > li > a {
+          color: white;
+          text-decoration: none; }
+          .footer-container-media > div > ul > li > a > i {
+            margin-right: 0.5rem; }
+    .footer-container-copy {
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column; }
+
 nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  z-index: 10000; }
+  z-index: 10000;
+  pointer-events: none; }
   nav .LogoContainer {
-    margin: 0.5rem;
+    padding: 0.5rem;
     width: 15rem;
-    height: 5rem; }
+    height: 5rem;
+    background-color: white;
+    border-radius: 0px 0px 15px 0px;
+    pointer-events: auto; }
   nav .MenuButton {
     padding: 0.5rem;
     background-color: white;
@@ -59,7 +99,8 @@ nav {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    border-radius: 0px 0px 0px 15px; }
+    border-radius: 0px 0px 0px 15px;
+    pointer-events: auto; }
     nav .MenuButton:hover {
       cursor: pointer; }
 
@@ -220,10 +261,18 @@ nav {
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
 
 .clothes-background {
-  background: linear-gradient(to top right, #ff7eee, #f300d3); }
+  background: linear-gradient(to top right, #d07eff, #9114da); }
 
 .clothes-path {
-  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%); }
+  width: 19rem;
+  clip-path: ellipse(50% 50% at 50% 50%); }
+
+.agd-background {
+  background: linear-gradient(to top right, #ffc56e, #ff9900); }
+
+.agd-path {
+  width: 19rem;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
 
 .head {
   width: 100vw;

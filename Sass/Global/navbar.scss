@@ -4,10 +4,14 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 10000;
+  pointer-events: none;
   .LogoContainer {
-    margin: 0.5rem;
+    padding: 0.5rem;
     width: 15rem;
     height: 5rem;
+    background-color: white;
+    border-radius: 0px 0px 15px 0px;
+    pointer-events: auto;
   }
   .MenuButton {
     padding: 0.5rem;
@@ -19,6 +23,7 @@ nav {
     justify-content: center;
     font-size: 1.5rem;
     border-radius: 0px 0px 0px 15px;
+    pointer-events: auto;
 
     &:hover {
       cursor: pointer;
