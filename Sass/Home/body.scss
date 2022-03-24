@@ -223,3 +223,22 @@
     20% 10%
   );
 }
+.electronic-background {
+  background: linear-gradient(to top right, #95d8ff, #5bc3ff);
+}
+.electronic-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.meal-background {
+  background: linear-gradient(to top right, #ff7eee, #f300d3);
+}
+.meal-path {
+  width: 19rem;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+.clothes-background {
+  background: linear-gradient(to top right, #ff7eee, #f300d3);
+}
+.clothes-path {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
