@@ -21,8 +21,29 @@
         <svg class="LogoContainer">
             <use xlink:href="./img/BlueFlowerLogo.svg#FlowerLogo" />
         </svg>
-        <div class="MenuButton">
-            <i class="fas fa-bars"></i>
+        <div class="Menu">
+            <div  class="Menu-blog">
+                <i class="fab fa-blogger-b"></i>
+            </div>
+            <div  class="Menu-account">
+                <i class="fas fa-user"></i>
+            </div>
+            <div  class="Menu-Button">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="menu-container">
+            <div class="menu-container-close"><i class="fas fa-times"></i></div>
+            <div class="menu-container-btns">
+                <div class="menu-container-btns-btn">
+                    <div class="menu-container-btns-btn-link"><a href="#">Strona główna</a></div>
+                    <div class="menu-container-btns-btn-link"><a href="#">O nas</a></div>
+                    <div class="menu-container-btns-btn-link"><a href="#">Blog</a></div>
+                    <div class="menu-container-btns-btn-link"><a href="#">Logowanie</a></div>
+                    <div class="menu-container-btns-btn-link"><a href="#">Konto</a></div>
+                    <div class="menu-container-btns-btn-link"><a href="#">Płatności</a></div>
+                </div>
+            </div>
         </div>
     </nav>
     <header class="head">
@@ -46,9 +67,45 @@
         <div class="items-headerdiv">
             <h1 class="items-header header-style">Najnowsze ogłoszenia</h1>
         </div>
+        <div class="items-filter">
+            <form class="items-filter-form">
+                <label class="items-filter-form-label" for="province">Obszar: </label>
+                <select id="province" class="items-filter-form-selection province-selection">
+                    <option>Polska</option>
+                    <option>Kujawsko-Pomorskie</option>
+                    <option>Pomorskie</option>
+                    <option>Zachodniopomorskie</option>
+                    <option>Warmińsko-Mazurskie</option>
+                    <option>Wielkopolskie</option>
+                    <option>Lubuskie</option>
+                    <option>Białowieskie</option>
+                    <option>Mazowieckie</option>
+                    <option>Lubelskie</option>
+                    <option>Podkarpackie</option>
+                    <option>Małopolskie</option>
+                    <option>Łódzkie</option>
+                    <option>Świętokrzyskie</option>
+                    <option>Opolskie</option>
+                    <option>Śląskie</option>
+                    <option>Dolnośląskie</option>
+                </select>
+                <label class="items-filter-form-label" for="topic">Kategoria: </label>
+                <select id="topic" class="items-filter-form-selection topic-selection">
+                    <option>Wszystkie</option>
+                    <option>Inne</option>
+                    <option>Samochody</option>
+                    <option>Kryptowaluty</option>
+                    <option>Praca</option>
+                    <option>Elektronika</option>
+                    <option>Jedzenie</option>
+                    <option>Odzież</option>
+                    <option>AGD</option>
+                </select>
+            </form>
+        </div>
         <div class="items-container">
             <!--Card for rest offer-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -96,9 +153,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!--Card for cars and cards-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -146,9 +203,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!--Card for Crypto-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -196,9 +253,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!--Card for jobs-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -246,9 +303,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!--Card for electronics-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -296,9 +353,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!--Card for meal-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -346,9 +403,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!--Card for clothes-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -396,9 +453,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!--Card for AGD-->
-            <div class="items-container-item">
+            <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
@@ -446,7 +503,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </article>
     <footer class="footer">
@@ -474,5 +531,5 @@
         </div>
     </footer>
 </body>
-
+<script src="./js/menu.js"></script>
 </html>
