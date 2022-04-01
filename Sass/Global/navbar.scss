@@ -20,13 +20,14 @@ nav {
     -webkit-backdrop-filter: blur(7.4px);
     border: 1px solid rgba(255, 255, 255, 0.46);
     z-index: 100000;
+    transition: clip-path .5s ease-in-out;
     &-close {
       width: 100%;
       height: auto;
       display: flex;
       justify-content: end;
       font-size: 1.5rem;
-      pointer-events: all;
+      pointer-events: auto;
 
       & > i {
         margin: 1rem;
