@@ -491,6 +491,208 @@ nav {
 .CardPremium {
   background: linear-gradient(to top right, #bd1600, #db2b2b); }
 
+.loginPage {
+  background-color: #5bc3ff;
+  background-image: url("./../../img/login/loginBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+  .loginPage-container {
+    width: 50rem;
+    height: 35rem;
+    border-radius: 15px;
+    overflow: hidden; }
+    .loginPage-container-loginform {
+      display: flex;
+      background-color: white; }
+      .loginPage-container-loginform-image {
+        height: 35rem;
+        width: 25rem;
+        background-color: white;
+        position: relative; }
+        .loginPage-container-loginform-image-loginimage {
+          position: absolute;
+          top: 0rem;
+          left: 0;
+          width: 100%;
+          height: 35rem;
+          transition: all .5s ease-in-out; }
+        .loginPage-container-loginform-image-registerimage {
+          position: absolute;
+          top: 35rem;
+          left: 25rem;
+          width: 100%;
+          height: 35rem;
+          z-index: 100;
+          transition: all .5s ease-in-out; }
+      .loginPage-container-loginform-form {
+        width: 25rem;
+        position: relative; }
+        .loginPage-container-loginform-form-login {
+          position: absolute;
+          width: 25rem;
+          height: 35rem;
+          top: 0rem;
+          left: 0rem;
+          transition: all .5s ease-in-out; }
+          .loginPage-container-loginform-form-login > form {
+            padding: 0rem 1rem;
+            display: flex;
+            flex-direction: column; }
+            .loginPage-container-loginform-form-login > form > label {
+              font-size: 1.2rem;
+              font-family: "Ubuntu"; }
+              .loginPage-container-loginform-form-login > form > label:not(:first-child) {
+                margin-top: 1.2rem; }
+            .loginPage-container-loginform-form-login > form > input {
+              margin: .5rem 0rem;
+              padding: .5rem;
+              border: none;
+              border-bottom: 2px solid #1876ac;
+              font-family: "Open Sans"; }
+              .loginPage-container-loginform-form-login > form > input:focus {
+                outline: none;
+                border-bottom: 2px solid red; }
+            .loginPage-container-loginform-form-login > form > button {
+              width: 10rem;
+              position: relative;
+              left: 50%;
+              top: 0;
+              transform: translate(-50%, 0%);
+              padding: .5rem;
+              margin: 1rem 0rem;
+              border-radius: 15px;
+              border: none;
+              background: linear-gradient(to top right, #008cff, #00c3ff);
+              color: white;
+              font-size: 1rem;
+              transition: all .5s ease-in-out; }
+              .loginPage-container-loginform-form-login > form > button:hover {
+                cursor: pointer;
+                background: linear-gradient(to top right, #0060af, #007599); }
+          .loginPage-container-loginform-form-login-noaccount {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column; }
+            .loginPage-container-loginform-form-login-noaccount > span {
+              font-size: .9rem; }
+            .loginPage-container-loginform-form-login-noaccount > button {
+              font-size: .9rem;
+              background: none;
+              border: none;
+              text-decoration: underline;
+              color: #248ed9; }
+              .loginPage-container-loginform-form-login-noaccount > button:hover {
+                cursor: pointer;
+                color: #0062a8; }
+              .loginPage-container-loginform-form-login-noaccount > button > i {
+                margin: 0rem .5rem; }
+          .loginPage-container-loginform-form-login-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+          .loginPage-container-loginform-form-login-ico {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .loginPage-container-loginform-form-login-ico > i {
+              margin: 2rem 0rem 1rem 0rem;
+              font-size: 4rem;
+              background-color: #1876ac;
+              padding: 1rem;
+              border-radius: 50%;
+              color: white; }
+        .loginPage-container-loginform-form-register {
+          position: relative;
+          top: -35rem;
+          left: -25rem;
+          width: 25rem;
+          height: 35rem;
+          transition: all .5s ease-in-out; }
+          .loginPage-container-loginform-form-register > form {
+            padding: 0rem 1rem;
+            display: flex;
+            flex-direction: column;
+            transition: all .5s ease-in-out; }
+            .loginPage-container-loginform-form-register > form > label {
+              font-size: 1.2rem;
+              font-family: "Ubuntu"; }
+              .loginPage-container-loginform-form-register > form > label:not(:first-child) {
+                margin-top: 1.2rem; }
+            .loginPage-container-loginform-form-register > form > input {
+              margin: .25rem 0rem;
+              padding: .25rem;
+              border: none;
+              border-bottom: 2px solid #1876ac;
+              font-family: "Open Sans"; }
+              .loginPage-container-loginform-form-register > form > input:focus {
+                outline: none;
+                border-bottom: 2px solid red; }
+            .loginPage-container-loginform-form-register > form > button {
+              width: 10rem;
+              position: relative;
+              left: 50%;
+              top: 0;
+              transform: translate(-50%, 0%);
+              padding: .5rem;
+              margin: 1rem 0rem;
+              border-radius: 15px;
+              border: none;
+              background: linear-gradient(to top right, #008cff, #00c3ff);
+              color: white;
+              font-size: 1rem;
+              transition: all .5s ease-in-out; }
+              .loginPage-container-loginform-form-register > form > button:hover {
+                cursor: pointer;
+                background: linear-gradient(to top right, #0060af, #007599); }
+          .loginPage-container-loginform-form-register-noaccount {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column; }
+            .loginPage-container-loginform-form-register-noaccount > span {
+              font-size: .9rem; }
+            .loginPage-container-loginform-form-register-noaccount > button {
+              font-size: .9rem;
+              background: none;
+              border: none;
+              text-decoration: underline;
+              color: #248ed9; }
+              .loginPage-container-loginform-form-register-noaccount > button:hover {
+                cursor: pointer;
+                color: #0062a8; }
+              .loginPage-container-loginform-form-register-noaccount > button > i {
+                margin: 0rem .5rem; }
+          .loginPage-container-loginform-form-register-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+          .loginPage-container-loginform-form-register-ico {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .loginPage-container-loginform-form-register-ico > i {
+              margin: 1.5rem 0rem .5rem 0rem;
+              font-size: 4rem;
+              background-color: #1876ac;
+              padding: 1.25rem 1rem;
+              border-radius: 50%;
+              color: white; }
+
 .head {
   width: 100vw;
   height: 100vh;

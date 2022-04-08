@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="./img/BlueFlowerIco.png" rel="icon" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>Blue Flower</title>
+</head>
+
+<body class="loginPage">
+    <div class="loginPage-container">
+        <div class="loginPage-container-loginform">
+            <div class="loginPage-container-loginform-image">
+                <img class="loginPage-container-loginform-image-loginimage LoginImage" src="./img/login/loginImage.jpg" alt="loginImage" />
+                <img class="loginPage-container-loginform-image-registerimage RegisterImage" src="./img/login/registerImage.jpg" alt="loginImage" />
+            </div>
+            <div class="loginPage-container-loginform-form">
+                <div class="loginPage-container-loginform-form-login LoginForm">
+                    <div class="loginPage-container-loginform-form-login-ico"><i class="fas fa-user"></i></div>
+                    <div class="loginPage-container-loginform-form-login-header">
+                        <h1>Login</h1>
+                    </div>
+                    <form>
+                        <label for="email">Email: </label>
+                        <input id="email" type="email" placeholder="jan.kowalski@email.com" />
+                        <label for="password">Hasło: </label>
+                        <input id="password" type="password" />
+                        <button>Zaloguj</button>
+                    </form>
+                    <div class="loginPage-container-loginform-form-login-noaccount">
+                        <span>Nie masz konta?</span>
+                        <button class="GoToRegister"><i class="far fa-arrow-alt-circle-left"></i>Rejestracja</button>
+                    </div>
+                </div>
+                <div class="loginPage-container-loginform-form-register RegisterForm">
+                    <div class="loginPage-container-loginform-form-register-ico"><i class="fas fa-user-plus"></i></div>
+                    <div class="loginPage-container-loginform-form-register-header">
+                        <h1>Rejestracja</h1>
+                    </div>
+                    <form>
+                        <label for="email">Email: </label>
+                        <input id="email" type="email" placeholder="jan.kowalski@email.com" />
+                        <label for="password">Hasło: </label>
+                        <input id="password" type="password" />
+                        <label for="password">Powtórz hasło: </label>
+                        <input id="password" type="password" />
+                        <button>Zarejestruj</button>
+                    </form>
+                    <div class="loginPage-container-loginform-form-register-noaccount">
+                        <span>Masz już konto?</span>
+                        <button class="GoToLogin"><i class="far fa-arrow-alt-circle-left"></i>Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="loginPage-container-registerform"></div> -->
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+<script src="./js/menu.js"></script>
+</html>
