@@ -628,7 +628,7 @@ nav {
               font-size: 1.2rem;
               font-family: "Ubuntu"; }
               .loginPage-container-loginform-form-register > form > label:not(:first-child) {
-                margin-top: 1.2rem; }
+                margin-top: 1rem; }
             .loginPage-container-loginform-form-register > form > input {
               margin: .25rem 0rem;
               padding: .25rem;
@@ -657,8 +657,8 @@ nav {
                 background: linear-gradient(to top right, #0060af, #007599); }
           .loginPage-container-loginform-form-register-noaccount {
             position: absolute;
-            bottom: 2rem;
-            right: 2rem;
+            bottom: 1rem;
+            right: 1rem;
             display: flex;
             flex-direction: column; }
             .loginPage-container-loginform-form-register-noaccount > span {
@@ -692,6 +692,82 @@ nav {
               padding: 1.25rem 1rem;
               border-radius: 50%;
               color: white; }
+
+.LoginDangerEmail {
+  color: red;
+  font-size: .75rem;
+  display: none; }
+  .LoginDangerEmail > i {
+    margin-right: .5rem; }
+
+.LoginDangerPassword {
+  color: red;
+  font-size: .75rem;
+  display: none; }
+  .LoginDangerPassword > i {
+    margin-right: .5rem; }
+
+.LoginSuccessEmail {
+  color: #19d400;
+  font-size: .75rem;
+  display: none; }
+  .LoginSuccessEmail > i {
+    margin-right: .5rem; }
+
+.LoginSuccessPassword {
+  color: #19d400;
+  font-size: .75rem; }
+  .LoginSuccessPassword > i {
+    margin-right: .5rem; }
+
+.RegisterDangerEmail {
+  color: red;
+  font-size: .75rem;
+  display: none; }
+  .RegisterDangerEmail > i {
+    margin-right: .5rem; }
+
+.RegisterDangerEmailExists {
+  color: red;
+  font-size: .75rem;
+  display: none; }
+  .RegisterDangerEmailExists > i {
+    margin-right: .5rem; }
+
+.RegisterSuccessEmail {
+  color: #19d400;
+  font-size: .75rem;
+  display: none; }
+  .RegisterSuccessEmail > i {
+    margin-right: .5rem; }
+
+.RegisterSuccessPassword {
+  color: #19d400;
+  font-size: .75rem;
+  display: none; }
+  .RegisterSuccessPassword > i {
+    margin-right: .5rem; }
+
+.RegisterSuccessPasswordBoth {
+  color: #19d400;
+  font-size: .75rem;
+  display: none; }
+  .RegisterSuccessPasswordBoth > i {
+    margin-right: .5rem; }
+
+.RegisterDangerPasswordBoth {
+  color: red;
+  font-size: .75rem;
+  display: none; }
+  .RegisterDangerPasswordBoth > i {
+    margin-right: .5rem; }
+
+.RegisterDangerPassword {
+  color: red;
+  font-size: .75rem;
+  display: none; }
+  .RegisterDangerPassword > i {
+    margin-right: .5rem; }
 
 .head {
   width: 100vw;

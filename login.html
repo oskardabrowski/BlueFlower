@@ -32,8 +32,11 @@
                     <form>
                         <label for="email">Email: </label>
                         <input id="email" type="email" placeholder="jan.kowalski@email.com" />
+                        <span class="LoginDangerEmail"><i class="fas fa-times"></i>Proszę wpisz poprawny email</span>
+                        <span class="LoginSuccessEmail"><i class="fas fa-check"></i>Email poprawny</span>
                         <label for="password">Hasło: </label>
                         <input id="password" type="password" />
+                        <span class="LoginDangerPassword"><i class="fas fa-times"></i>Proszę wpisz poprawne hasło</span>
                         <button>Zaloguj</button>
                     </form>
                     <div class="loginPage-container-loginform-form-login-noaccount">
@@ -49,10 +52,17 @@
                     <form>
                         <label for="email">Email: </label>
                         <input id="email" type="email" placeholder="jan.kowalski@email.com" />
+                        <span class="RegisterDangerEmail"><i class="fas fa-times"></i>Proszę wpisz poprawny email</span>
+                        <span class="RegisterDangerEmailExists"><i class="fas fa-times"></i>Proszę wpisz poprawny email</span>
+                        <span class="RegisterSuccessEmail"><i class="fas fa-check"></i>Email poprawny</span>
                         <label for="password">Hasło: </label>
                         <input id="password" type="password" />
+                        <span class="RegisterDangerPassword"><i class="fas fa-times"></i>Hasło powinno zawierać conajmniej jedną dużą literę i znak specjalny z wymienionych: #?@$%&</span>
+                        <span class="RegisterSuccessPassword"><i class="fas fa-check"></i>Hasło poprawne</span>
                         <label for="password">Powtórz hasło: </label>
                         <input id="password" type="password" />
+                        <span class="RegisterSuccessPasswordBoth"><i class="fas fa-check"></i>Hasła poprawne</span>
+                        <span class="RegisterDangerPasswordBoth"><i class="fas fa-times"></i>Hasła nie są jednakowe</span>
                         <button>Zarejestruj</button>
                     </form>
                     <div class="loginPage-container-loginform-form-register-noaccount">

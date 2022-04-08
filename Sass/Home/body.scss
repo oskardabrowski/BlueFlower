@@ -588,7 +588,7 @@
             font-family: "Ubuntu";
 
             &:not(:first-child) {
-              margin-top: 1.2rem;
+              margin-top: 1rem;
             }
           }
 
@@ -629,8 +629,8 @@
 
         &-noaccount {
           position: absolute;
-          bottom: 2rem;
-          right: 2rem;
+          bottom: 1rem;
+          right: 1rem;
           display: flex;
           flex-direction: column;
           & > span {
@@ -684,3 +684,100 @@
 
   }
 }
+
+.LoginDangerEmail {
+  color: red;
+  font-size: .75rem;
+  display: none;
+  & > i {
+    margin-right: .5rem;
+  }
+}
+.LoginDangerPassword {
+    color: red;
+    font-size: .75rem;
+    display: none;
+    &>i {
+      margin-right: .5rem;
+    }
+}
+.LoginSuccessEmail {
+  color: rgb(25, 212, 0);
+  font-size: .75rem;
+  display: none;
+  & > i {
+    margin-right: .5rem;
+  }
+}
+.LoginSuccessPassword {
+    color: rgb(25, 212, 0);
+    font-size: .75rem;
+    // display: none;
+    &>i {
+      margin-right: .5rem;
+    }
+}
+
+.RegisterDangerEmail {
+  color: red;
+  font-size: .75rem;
+  display: none;
+  
+  &>i {
+    margin-right: .5rem;
+  }
+}
+.RegisterDangerEmailExists {
+  color: red;
+  font-size: .75rem;
+  display: none;
+  
+  &>i {
+    margin-right: .5rem;
+  }
+}
+.RegisterSuccessEmail {
+  color: rgb(25, 212, 0);
+  font-size: .75rem;
+  display: none;
+  &>i {
+    margin-right: .5rem;
+  }
+}
+.RegisterSuccessPassword {
+  color: rgb(25, 212, 0);
+  font-size: .75rem;
+  display: none;
+  &>i {
+    margin-right: .5rem;
+  }
+}
+.RegisterSuccessPasswordBoth {
+  color: rgb(25, 212, 0);
+  font-size: .75rem;
+  display: none;
+  &>i {
+    margin-right: .5rem;
+  }
+}
+.RegisterDangerPasswordBoth {
+  color: red;
+  font-size: .75rem;
+  display: none;
+  &>i {
+    margin-right: .5rem;
+  }
+}
+.RegisterDangerPassword {
+  color: red;
+  font-size: .75rem;
+  display: none;
+  &>i {
+    margin-right: .5rem;
+  }
+}
+
+
+
+
+
