@@ -284,30 +284,40 @@
   &-container {
     width: 85vw;
     height: 90vh;
+    overflow-y: scroll;
 
     &-cards {
       width: 100%;
       height: auto;
       text-align: center;
-      padding-top: 4rem;
+      padding-top: 3rem;
+      display: grid;
+      min-height: 90vh;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
 
       &-card {
-        display: inline-block;
-        height: max-content;
-        margin: 0rem 2rem;
-        min-width: 20rem;
+        &:first-child {
+          margin-left: 2rem;
+        }
+        &:last-child {
+          margin-right: 2rem;
+        }
+        // min-width: 20rem;
+        height: 90%;
+        // width: 35rem;
         border-radius: 15px;
 
         &-icon {
-          margin: 2rem 0rem;
-          font-size: 3rem;
+          margin: 4rem 0rem;
+          font-size: 4rem;
         }
         &-header {
-          margin: 1rem;
+          margin: .5rem;
           font-size: 1.2rem;
         }
         &-list {
-          margin: 3rem 0rem;
+          margin: 1rem 0rem;
           font-size: 1.2rem;
           display: flex;
           flex-direction: column;
@@ -319,8 +329,13 @@
             padding: 0rem;
             width: 80%;
             & > li {
-              margin: 1rem 0rem;
-              padding-top: 1rem;
+              margin: 2rem 0rem;
+              padding-top: 2rem;
+              font-size: 1.5rem;
+
+              & > i {
+                margin-right: .5rem;
+              }
 
               &:not(:first-child) {
                 border-top: 1px solid black;
@@ -329,10 +344,10 @@
           }
         }
         &-button {
-          margin: 1.5rem 0rem;
+          margin: 3rem 0rem;
           & > button {
-            padding: 1rem;
-            font-size: 1rem;
+            padding: 1.2rem;
+            font-size: 1.5rem;
             border: none;
             border-radius: 15px;
             background: linear-gradient(to top, rgb(0, 182, 0), rgb(58, 207, 58));
@@ -345,6 +360,141 @@
         }
       }
     }
+
+    &-profile {
+      &-form {
+
+        &-h1 {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & > h1 {
+            font-weight: 600;
+            background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+          }
+        }
+        &-h2 {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & > h2 {
+            font-weight: 400;
+            background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+          }
+        }
+        &-photo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &-box {
+            border-radius: 100rem;
+            overflow: hidden;
+            border: 5px solid blue;
+            position: relative;
+
+            &:hover {
+              .UserApp-container-profile-form-photo-box-edit {
+                opacity: 1;
+              }
+            }
+            &>img {
+              width: 40rem;
+            }
+            &-edit {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: #00497485;
+              z-index: 100;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              opacity: 0;
+              transition: all .5s ease-in-out;
+
+              & > button {
+                width: 5rem;
+                height: 5rem;
+                font-size: 2rem;
+                margin: 1rem;
+                border: none;
+                border-radius: 50%;
+                background: #0062a8;
+                color: white;
+              }
+            }
+          }
+        }
+        &-desc {
+          width: 100%;
+        
+          &>textarea {
+            width: 100%;
+            font-size: 2rem;
+            font-family: 'Ubuntu';
+            resize: none;
+          }
+        }
+        &-contact {
+          display: flex;
+          flex-direction: column;
+
+          & > label { 
+            margin-left: 2rem;
+            margin-top: 2rem;
+            font-size: 2rem;
+          }
+
+          & > input {
+            padding: .75rem;
+            border: none;
+            border-bottom: 2px solid green;
+            outline: none;
+            font-size: 1.2rem;
+
+            &:focus {
+              border-bottom: 3px solid red;
+            }
+          }
+        }
+        &-submit {
+          margin: 5rem 0rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          & > button {
+            background: linear-gradient(to top right, #36a7e9, #0573b3);
+            border: none;
+            padding: 1rem;
+            border-radius: 15px;
+            font-size: 2rem;
+            font-family: 'Ubuntu';
+            color: white;
+
+            &:hover {
+              background: #004974;
+            }
+          }
+        }
+      }
+
+    }
   }
   &-menu {
     width: 15vw;
@@ -354,6 +504,7 @@
     border-right: 8px solid #004974;
 
     & > ul {
+      margin-top: 2rem;
       list-style-type: none;
       padding: 0;
       & > li {
@@ -362,6 +513,7 @@
         color: white;
         font-weight: 500;
         position: relative;
+        font-size: 1.8rem;
 
         &:hover {
           cursor: pointer;
@@ -404,13 +556,13 @@
 
 
 .CardFree {
-  background: linear-gradient(to top right, rgb(184, 184, 184), rgb(126, 126, 126));
+  background: linear-gradient(to top right, rgb(148, 255, 99), rgb(255, 192, 17));
 }
 .CardStandard {
-  background: linear-gradient(to top right, rgb(0, 157, 248), rgb(55, 182, 255));
+  background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
 }
 .CardPremium {
-  background: linear-gradient(to top right, rgb(189, 22, 0), rgb(219, 43, 43));
+  background: linear-gradient(to top right, rgb(0, 82, 189), rgb(219, 43, 43));
 }
 
 

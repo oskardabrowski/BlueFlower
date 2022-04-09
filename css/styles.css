@@ -188,15 +188,15 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem; }
+      font-size: 3rem; }
       .AccountNav-btns > div:hover {
         cursor: pointer; }
     .AccountNav-btns-photo {
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid blue;
-      width: 3.5rem;
-      height: 3.5rem; }
+      width: 5rem;
+      height: 5rem; }
       .AccountNav-btns-photo > img {
         width: 100%;
         height: 100%; }
@@ -395,26 +395,32 @@ nav {
   z-index: 500; }
   .UserApp-container {
     width: 85vw;
-    height: 90vh; }
+    height: 90vh;
+    overflow-y: scroll; }
     .UserApp-container-cards {
       width: 100%;
       height: auto;
       text-align: center;
-      padding-top: 4rem; }
+      padding-top: 3rem;
+      display: grid;
+      min-height: 90vh;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem; }
       .UserApp-container-cards-card {
-        display: inline-block;
-        height: max-content;
-        margin: 0rem 2rem;
-        min-width: 20rem;
+        height: 90%;
         border-radius: 15px; }
+        .UserApp-container-cards-card:first-child {
+          margin-left: 2rem; }
+        .UserApp-container-cards-card:last-child {
+          margin-right: 2rem; }
         .UserApp-container-cards-card-icon {
-          margin: 2rem 0rem;
-          font-size: 3rem; }
+          margin: 4rem 0rem;
+          font-size: 4rem; }
         .UserApp-container-cards-card-header {
-          margin: 1rem;
+          margin: .5rem;
           font-size: 1.2rem; }
         .UserApp-container-cards-card-list {
-          margin: 3rem 0rem;
+          margin: 1rem 0rem;
           font-size: 1.2rem;
           display: flex;
           flex-direction: column;
@@ -425,21 +431,119 @@ nav {
             padding: 0rem;
             width: 80%; }
             .UserApp-container-cards-card-list > ul > li {
-              margin: 1rem 0rem;
-              padding-top: 1rem; }
+              margin: 2rem 0rem;
+              padding-top: 2rem;
+              font-size: 1.5rem; }
+              .UserApp-container-cards-card-list > ul > li > i {
+                margin-right: .5rem; }
               .UserApp-container-cards-card-list > ul > li:not(:first-child) {
                 border-top: 1px solid black; }
         .UserApp-container-cards-card-button {
-          margin: 1.5rem 0rem; }
+          margin: 3rem 0rem; }
           .UserApp-container-cards-card-button > button {
-            padding: 1rem;
-            font-size: 1rem;
+            padding: 1.2rem;
+            font-size: 1.5rem;
             border: none;
             border-radius: 15px;
             background: linear-gradient(to top, #00b600, #3acf3a);
             color: white; }
             .UserApp-container-cards-card-button > button:hover {
               cursor: pointer; }
+    .UserApp-container-profile-form-h1 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .UserApp-container-profile-form-h1 > h1 {
+        font-weight: 600;
+        background: linear-gradient(to top right, #9d00f8, #37b6ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; }
+    .UserApp-container-profile-form-h2 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .UserApp-container-profile-form-h2 > h2 {
+        font-weight: 400;
+        background: linear-gradient(to top right, #9d00f8, #37b6ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; }
+    .UserApp-container-profile-form-photo {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .UserApp-container-profile-form-photo-box {
+        border-radius: 100rem;
+        overflow: hidden;
+        border: 5px solid blue;
+        position: relative; }
+        .UserApp-container-profile-form-photo-box:hover .UserApp-container-profile-form-photo-box-edit {
+          opacity: 1; }
+        .UserApp-container-profile-form-photo-box > img {
+          width: 40rem; }
+        .UserApp-container-profile-form-photo-box-edit {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #00497485;
+          z-index: 100;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transition: all .5s ease-in-out; }
+          .UserApp-container-profile-form-photo-box-edit > button {
+            width: 5rem;
+            height: 5rem;
+            font-size: 2rem;
+            margin: 1rem;
+            border: none;
+            border-radius: 50%;
+            background: #0062a8;
+            color: white; }
+    .UserApp-container-profile-form-desc {
+      width: 100%; }
+      .UserApp-container-profile-form-desc > textarea {
+        width: 100%;
+        font-size: 2rem;
+        font-family: 'Ubuntu';
+        resize: none; }
+    .UserApp-container-profile-form-contact {
+      display: flex;
+      flex-direction: column; }
+      .UserApp-container-profile-form-contact > label {
+        margin-left: 2rem;
+        margin-top: 2rem;
+        font-size: 2rem; }
+      .UserApp-container-profile-form-contact > input {
+        padding: .75rem;
+        border: none;
+        border-bottom: 2px solid green;
+        outline: none;
+        font-size: 1.2rem; }
+        .UserApp-container-profile-form-contact > input:focus {
+          border-bottom: 3px solid red; }
+    .UserApp-container-profile-form-submit {
+      margin: 5rem 0rem;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .UserApp-container-profile-form-submit > button {
+        background: linear-gradient(to top right, #36a7e9, #0573b3);
+        border: none;
+        padding: 1rem;
+        border-radius: 15px;
+        font-size: 2rem;
+        font-family: 'Ubuntu';
+        color: white; }
+        .UserApp-container-profile-form-submit > button:hover {
+          background: #004974; }
   .UserApp-menu {
     width: 15vw;
     background: linear-gradient(to top right, #36a7e9, #0573b3);
@@ -447,6 +551,7 @@ nav {
     min-height: 90vh;
     border-right: 8px solid #004974; }
     .UserApp-menu > ul {
+      margin-top: 2rem;
       list-style-type: none;
       padding: 0; }
       .UserApp-menu > ul > li {
@@ -454,7 +559,8 @@ nav {
         margin: 0rem 0rem;
         color: white;
         font-weight: 500;
-        position: relative; }
+        position: relative;
+        font-size: 1.8rem; }
         .UserApp-menu > ul > li:hover {
           cursor: pointer; }
           .UserApp-menu > ul > li:hover::before {
@@ -483,13 +589,13 @@ nav {
           margin-right: .5rem; }
 
 .CardFree {
-  background: linear-gradient(to top right, #b8b8b8, #7e7e7e); }
+  background: linear-gradient(to top right, #94ff63, #ffc011); }
 
 .CardStandard {
-  background: linear-gradient(to top right, #009df8, #37b6ff); }
+  background: linear-gradient(to top right, #9d00f8, #37b6ff); }
 
 .CardPremium {
-  background: linear-gradient(to top right, #bd1600, #db2b2b); }
+  background: linear-gradient(to top right, #0052bd, #db2b2b); }
 
 .loginPage {
   background-color: #5bc3ff;
