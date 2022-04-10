@@ -633,6 +633,46 @@ nav {
         margin: 1rem 0rem; }
         .UserApp-container-payments-payment-remove {
           font-size: 3rem; }
+    .UserApp-container-changePassword-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .UserApp-container-changePassword-header > h1 {
+        background: linear-gradient(to top right, #9d00f8, #37b6ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+    .UserApp-container-changePassword > form {
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
+      .UserApp-container-changePassword > form > label {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        font-size: 2rem; }
+      .UserApp-container-changePassword > form > button {
+        justify-self: center;
+        align-self: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 15rem;
+        background: linear-gradient(to top right, #9d00f8, #37b6ff);
+        border: none;
+        border-radius: 15px;
+        font-size: 2rem;
+        color: white; }
+        .UserApp-container-changePassword > form > button:hover {
+          background: #004974; }
+      .UserApp-container-changePassword > form > div {
+        width: 100%; }
+        .UserApp-container-changePassword > form > div > input {
+          width: 100%;
+          padding: .5rem;
+          border: none;
+          outline: none;
+          border-bottom: 2px solid green; }
+          .UserApp-container-changePassword > form > div > input:focus {
+            border-bottom: 3px solid red; }
   .UserApp-menu {
     width: 15vw;
     background: linear-gradient(to top right, #36a7e9, #0573b3);
