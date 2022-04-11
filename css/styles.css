@@ -421,7 +421,8 @@ nav {
             align-self: start;
             color: white;
             border-radius: 15px 15px 15px 0px;
-            font-size: 1.75rem; }
+            font-size: 1.75rem;
+            max-width: 30rem; }
           .UserApp-container-chat-messages-window-mesfrom {
             background-color: #9c9c9c;
             padding: 1rem;
@@ -429,7 +430,8 @@ nav {
             align-self: end;
             color: white;
             border-radius: 15px 15px 0px 15px;
-            font-size: 1.75rem; }
+            font-size: 1.75rem;
+            max-width: 30rem; }
         .UserApp-container-chat-messages-form {
           border-top: 1px solid black;
           height: 20%;
