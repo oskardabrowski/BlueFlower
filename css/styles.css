@@ -673,6 +673,99 @@ nav {
           border-bottom: 2px solid green; }
           .UserApp-container-changePassword > form > div > input:focus {
             border-bottom: 3px solid red; }
+    .UserApp-container-cart {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative; }
+      .UserApp-container-cart-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .UserApp-container-cart-header > h1 {
+          background: linear-gradient(to top right, #9d00f8, #37b6ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; }
+      .UserApp-container-cart-items {
+        height: 90%; }
+        .UserApp-container-cart-items-box {
+          height: 50rem;
+          border-bottom: 2px solid black;
+          border-top: 2px solid black;
+          overflow-y: scroll; }
+          .UserApp-container-cart-items-box-item {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black; }
+            .UserApp-container-cart-items-box-item-total {
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+              .UserApp-container-cart-items-box-item-total > span {
+                margin: 0rem 2rem;
+                font-size: 2rem; }
+              .UserApp-container-cart-items-box-item-total > h2 {
+                font-size: 2rem; }
+            .UserApp-container-cart-items-box-item-months {
+              font-size: 2rem; }
+              .UserApp-container-cart-items-box-item-months > input {
+                border: none;
+                outline: none;
+                width: 7.5rem;
+                border-bottom: 2px solid green; }
+                .UserApp-container-cart-items-box-item-months > input:focus {
+                  border-bottom: 3px solid red; }
+            .UserApp-container-cart-items-box-item-desc {
+              width: auto;
+              display: flex; }
+              .UserApp-container-cart-items-box-item-desc-name {
+                margin-left: 2rem; }
+                .UserApp-container-cart-items-box-item-desc-name > h1 {
+                  font-size: 3rem; }
+                .UserApp-container-cart-items-box-item-desc-name > button {
+                  border: none;
+                  background: none;
+                  text-decoration: underline;
+                  color: red;
+                  font-size: 1.5rem; }
+                  .UserApp-container-cart-items-box-item-desc-name > button:hover {
+                    cursor: pointer; }
+              .UserApp-container-cart-items-box-item-desc-image {
+                width: 10rem;
+                height: 10rem; }
+                .UserApp-container-cart-items-box-item-desc-image > img {
+                  width: 100%;
+                  height: 100%; }
+        .UserApp-container-cart-items-btn {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .UserApp-container-cart-items-btn > button {
+            margin: 1rem;
+            padding: 1rem;
+            border: none;
+            background-color: #4bbdff;
+            font-size: 2rem;
+            border-radius: 15px;
+            transition: all .5s ease-in-out; }
+            .UserApp-container-cart-items-btn > button > i {
+              margin-left: 1rem; }
+            .UserApp-container-cart-items-btn > button:hover {
+              background-color: #004974;
+              color: white; }
+      .UserApp-container-cart-payment {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white; }
   .UserApp-menu {
     width: 15vw;
     background: linear-gradient(to top right, #36a7e9, #0573b3);
