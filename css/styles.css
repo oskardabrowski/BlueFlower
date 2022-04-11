@@ -397,6 +397,123 @@ nav {
     width: 85vw;
     height: 90vh;
     overflow-y: scroll; }
+    .UserApp-container-chat {
+      width: 100%;
+      height: 100%;
+      display: flex; }
+      .UserApp-container-chat-messages {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .UserApp-container-chat-messages-window {
+          height: 50rem;
+          width: 90%;
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 1rem;
+          overflow-y: scroll; }
+          .UserApp-container-chat-messages-window-mesto {
+            background-color: #248ed9;
+            padding: 1rem;
+            width: max-content;
+            align-self: start;
+            color: white;
+            border-radius: 15px 15px 15px 0px;
+            font-size: 1.75rem; }
+          .UserApp-container-chat-messages-window-mesfrom {
+            background-color: #9c9c9c;
+            padding: 1rem;
+            width: max-content;
+            align-self: end;
+            color: white;
+            border-radius: 15px 15px 0px 15px;
+            font-size: 1.75rem; }
+        .UserApp-container-chat-messages-form {
+          border-top: 1px solid black;
+          height: 20%;
+          width: 100%; }
+          .UserApp-container-chat-messages-form > form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .UserApp-container-chat-messages-form > form > textarea {
+              width: 80%;
+              height: 80%;
+              resize: none;
+              border-radius: 15px; }
+            .UserApp-container-chat-messages-form > form > button {
+              margin-left: 1rem;
+              font-size: 2rem;
+              background: none;
+              border: none;
+              color: #008cff; }
+              .UserApp-container-chat-messages-form > form > button > i {
+                margin-right: .5rem; }
+      .UserApp-container-chat-friends {
+        width: 20%;
+        border-left: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll; }
+        .UserApp-container-chat-friends-friend {
+          width: 95%;
+          border-top: 1px solid rgba(0, 0, 0, 0.5);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+          margin: .15rem 0rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .UserApp-container-chat-friends-friend:first-child {
+            margin-top: .5rem; }
+          .UserApp-container-chat-friends-friend:hover {
+            cursor: pointer;
+            background-color: rgba(128, 128, 128, 0.15); }
+          .UserApp-container-chat-friends-friend-person {
+            display: flex;
+            padding: 0rem .5rem; }
+            .UserApp-container-chat-friends-friend-person-img {
+              margin: .5rem 0rem;
+              width: 5rem;
+              height: 5rem;
+              border-radius: 25rem;
+              overflow: hidden;
+              border: 3px solid red;
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+              .UserApp-container-chat-friends-friend-person-img > img {
+                width: 110%;
+                height: 110%; }
+            .UserApp-container-chat-friends-friend-person .PersonActive {
+              border: 3px solid green; }
+            .UserApp-container-chat-friends-friend-person-desc {
+              margin-left: .5rem;
+              display: flex;
+              align-items: left;
+              justify-content: center;
+              flex-direction: column; }
+              .UserApp-container-chat-friends-friend-person-desc > h1 {
+                padding: 0;
+                margin: 0;
+                font-size: 2rem; }
+              .UserApp-container-chat-friends-friend-person-desc > h2 {
+                padding: 0;
+                margin: 0;
+                font-size: 1rem; }
+          .UserApp-container-chat-friends-friend-block {
+            color: red;
+            border: none;
+            background: none; }
+            .UserApp-container-chat-friends-friend-block > i {
+              margin-right: .25rem; }
+            .UserApp-container-chat-friends-friend-block:hover {
+              cursor: pointer;
+              color: #9e0000; }
     .UserApp-container-cards {
       width: 100%;
       height: auto;
@@ -765,7 +882,84 @@ nav {
         height: 100%;
         top: 0;
         left: 0;
+        clip-path: circle(0% at 0 0);
         background-color: white; }
+        .UserApp-container-cart-payment-free {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          display: none; }
+          .UserApp-container-cart-payment-free > h1 {
+            background: linear-gradient(to top right, #9d00f8, #37b6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+          .UserApp-container-cart-payment-free > h2 {
+            background: linear-gradient(to top right, #9d00f8, #37b6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+          .UserApp-container-cart-payment-free > button {
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 2rem;
+            border: none;
+            background-color: #4bbdff;
+            font-size: 2rem;
+            border-radius: 15px;
+            transition: all .5s ease-in-out; }
+            .UserApp-container-cart-payment-free > button > i {
+              margin-left: 1rem; }
+            .UserApp-container-cart-payment-free > button:hover {
+              background-color: #004974;
+              color: white; }
+        .UserApp-container-cart-payment-paid {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .UserApp-container-cart-payment-paid-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top right, #9d00f8, #37b6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+          .UserApp-container-cart-payment-paid-data > h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(to top right, #9d00f8, #37b6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+          .UserApp-container-cart-payment-paid-data > h3 {
+            font-size: 2rem; }
+          .UserApp-container-cart-payment-paid-data > button {
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 2rem;
+            border: none;
+            background-color: #4bbdff;
+            font-size: 2rem;
+            border-radius: 15px;
+            transition: all .5s ease-in-out; }
+            .UserApp-container-cart-payment-paid-data > button > i {
+              margin-left: 1rem; }
+            .UserApp-container-cart-payment-paid-data > button:hover {
+              background-color: #004974;
+              color: white; }
+          .UserApp-container-cart-payment-paid-back > button {
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 2rem;
+            border: none;
+            background-color: #4bbdff;
+            font-size: 2rem;
+            border-radius: 15px;
+            transition: all .5s ease-in-out; }
+            .UserApp-container-cart-payment-paid-back > button > i {
+              margin-right: 1rem; }
+            .UserApp-container-cart-payment-paid-back > button:hover {
+              background-color: #004974;
+              color: white; }
   .UserApp-menu {
     width: 15vw;
     background: linear-gradient(to top right, #36a7e9, #0573b3);
