@@ -397,6 +397,114 @@ nav {
     width: 85vw;
     height: 90vh;
     overflow-y: scroll; }
+    .UserApp-container-form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .UserApp-container-form-header {
+        font-size: 4rem; }
+      .UserApp-container-form > form {
+        width: 90%;
+        display: flex;
+        flex-direction: column; }
+        .UserApp-container-form > form > label {
+          margin: 2rem 0rem 1rem 0rem;
+          font-size: 2rem; }
+        .UserApp-container-form > form > input {
+          border: none;
+          outline: none;
+          border-bottom: 2px solid green;
+          padding: 1rem; }
+          .UserApp-container-form > form > input:focus {
+            border-bottom: 3px solid red; }
+        .UserApp-container-form > form > button {
+          margin: 1rem;
+          align-self: center;
+          margin: 2rem;
+          width: 15rem;
+          padding: 1rem;
+          border: none;
+          border-radius: 15px;
+          background: #248ed9;
+          color: white;
+          transition: all .5s ease-out; }
+          .UserApp-container-form > form > button:hover {
+            background: #004974; }
+    .UserApp-container-edit {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .UserApp-container-edit-images {
+        text-align: center; }
+        .UserApp-container-edit-images-image {
+          width: 20rem;
+          height: 20rem;
+          display: inline-block;
+          position: relative;
+          transition: all .5s ease-in-out;
+          margin: .5rem; }
+          .UserApp-container-edit-images-image:hover {
+            cursor: pointer;
+            transform: scale(1.1); }
+            .UserApp-container-edit-images-image:hover .UserApp-container-edit-images-image-del {
+              opacity: 1; }
+          .UserApp-container-edit-images-image-del {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: #00497488;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .5s ease-in-out; }
+            .UserApp-container-edit-images-image-del > i {
+              background-color: white;
+              padding: 2rem;
+              font-size: 3rem;
+              border-radius: 50%; }
+          .UserApp-container-edit-images-image > img {
+            width: 100%;
+            height: 100%; }
+      .UserApp-container-edit-header {
+        font-size: 4rem; }
+      .UserApp-container-edit > form {
+        width: 90%;
+        display: flex;
+        flex-direction: column; }
+        .UserApp-container-edit > form > img {
+          align-self: center;
+          width: 50%; }
+        .UserApp-container-edit > form > label {
+          margin: 2rem 0rem 1rem 0rem;
+          font-size: 2rem; }
+        .UserApp-container-edit > form > input {
+          border: none;
+          outline: none;
+          border-bottom: 2px solid green;
+          padding: 1rem; }
+          .UserApp-container-edit > form > input:focus {
+            border-bottom: 3px solid red; }
+        .UserApp-container-edit > form > button {
+          margin: 1rem;
+          align-self: center;
+          margin: 2rem;
+          width: 15rem;
+          padding: 1rem;
+          border: none;
+          border-radius: 15px;
+          background: #248ed9;
+          color: white;
+          transition: all .5s ease-out; }
+          .UserApp-container-edit > form > button:hover {
+            background: #004974; }
     .UserApp-container-chat {
       width: 100%;
       height: 100%;
@@ -1292,6 +1400,108 @@ nav {
   display: none; }
   .RegisterDangerPassword > i {
     margin-right: .5rem; }
+
+.hederStyle {
+  font-size: 2.5rem;
+  background: linear-gradient(to top right, #9d00f8, #37b6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.Privacy-banner {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden; }
+  .Privacy-banner-img {
+    width: 100%;
+    height: 100%; }
+  .Privacy-banner-header {
+    position: absolute;
+    color: white;
+    top: 10rem;
+    left: 10rem;
+    font-size: 3rem; }
+
+.Policy-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .Policy-desc > h2 {
+    font-size: 2rem; }
+  .Policy-desc > p {
+    font-size: 1.2rem;
+    width: 90%;
+    text-align: justify; }
+
+.Item-banner {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; }
+  .Item-banner > img {
+    width: 100%; }
+
+.Item-desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .Item-desc-article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem; }
+    .Item-desc-article-text {
+      width: 90%;
+      display: initial;
+      text-align: justify; }
+  .Item-desc-photos {
+    width: 90%;
+    text-align: center; }
+    .Item-desc-photos-item {
+      display: inline-block;
+      width: 20rem;
+      height: 20rem;
+      margin: .5rem;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all .5s ease-in-out; }
+      .Item-desc-photos-item > img {
+        width: 100%;
+        height: 100%; }
+      .Item-desc-photos-item:hover {
+        cursor: pointer;
+        transform: scale(1.1); }
+  .Item-desc-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .Item-desc-person-img {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid blue; }
+      .Item-desc-person-img > img {
+        width: 100%;
+        height: 100%; }
+    .Item-desc-person-contact {
+      font-size: 1.2rem; }
+      .Item-desc-person-contact > ul {
+        list-style-type: none;
+        padding: 0rem; }
+        .Item-desc-person-contact > ul > li {
+          text-align: center;
+          margin: .75rem 0rem; }
+          .Item-desc-person-contact > ul > li > i {
+            margin-right: .5rem; }
 
 .head {
   width: 100vw;
