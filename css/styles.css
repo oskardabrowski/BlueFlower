@@ -48,6 +48,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
+  @media (max-width: 50em) {
+    .footer {
+      background-image: none;
+      background-color: #248ed9; } }
+  @media (max-width: 37.5em) {
+    .footer {
+      overflow: hidden;
+      width: 100%; } }
   .footer-container {
     display: flex;
     flex-direction: row;
@@ -59,11 +67,27 @@ body {
     left: 0;
     color: white;
     font-size: 1.2rem; }
+    @media (max-width: 50em) {
+      .footer-container {
+        flex-direction: column;
+        font-size: 1rem; } }
     .footer-container-media {
       display: flex;
       flex-direction: row; }
+      @media (max-width: 50em) {
+        .footer-container-media {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; } }
+      @media (max-width: 50em) {
+        .footer-container-media > div {
+          margin: 0rem; } }
       .footer-container-media > div > ul {
         list-style-type: none; }
+        @media (max-width: 50em) {
+          .footer-container-media > div > ul {
+            margin: 1rem 0rem;
+            padding: 0rem; } }
         .footer-container-media > div > ul > li > i {
           margin-right: 0.5rem; }
         .footer-container-media > div > ul > li > a {
@@ -75,6 +99,12 @@ body {
       margin-right: 1rem;
       display: flex;
       flex-direction: column; }
+      @media (max-width: 50em) {
+        .footer-container-copy {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 1rem 0rem; } }
 
 nav {
   display: flex;
@@ -139,6 +169,10 @@ nav {
     background-color: white;
     border-radius: 0px 0px 15px 0px;
     pointer-events: auto; }
+    @media (max-width: 31.25em) {
+      nav .LogoContainer {
+        width: 10rem;
+        height: 3rem; } }
   nav .Menu {
     display: flex; }
     nav .Menu-Button {
@@ -208,11 +242,21 @@ nav {
     .items-filter-form {
       display: flex;
       justify-content: center; }
+      @media (max-width: 56.25em) {
+        .items-filter-form {
+          flex-direction: column;
+          align-items: center;
+          margin: .5rem 0rem; }
+          .items-filter-form > input {
+            width: 90%; } }
       .items-filter-form-selection {
         width: 15rem;
         font-size: 1rem;
         padding: 0rem 0.5rem;
         border-radius: 15px; }
+        @media (max-width: 56.25em) {
+          .items-filter-form-selection {
+            width: 90%; } }
       .items-filter-form-label {
         margin: 0rem 1rem;
         font-family: "Open Sans";
@@ -1139,14 +1183,27 @@ nav {
     height: 35rem;
     border-radius: 15px;
     overflow: hidden; }
+    @media (max-width: 56.25em) {
+      .loginPage-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px; } }
     .loginPage-container-loginform {
       display: flex;
       background-color: white; }
+      @media (max-width: 56.25em) {
+        .loginPage-container-loginform {
+          width: 100%;
+          height: 100%; } }
       .loginPage-container-loginform-image {
         height: 35rem;
         width: 25rem;
         background-color: white;
         position: relative; }
+        @media (max-width: 56.25em) {
+          .loginPage-container-loginform-image {
+            width: 0%;
+            height: 0%; } }
         .loginPage-container-loginform-image-loginimage {
           position: absolute;
           top: 0rem;
@@ -1154,6 +1211,9 @@ nav {
           width: 100%;
           height: 35rem;
           transition: all .5s ease-in-out; }
+          @media (max-width: 56.25em) {
+            .loginPage-container-loginform-image-loginimage {
+              display: none; } }
         .loginPage-container-loginform-image-registerimage {
           position: absolute;
           top: 35rem;
@@ -1162,9 +1222,15 @@ nav {
           height: 35rem;
           z-index: 100;
           transition: all .5s ease-in-out; }
+          @media (max-width: 56.25em) {
+            .loginPage-container-loginform-image-registerimage {
+              display: none; } }
       .loginPage-container-loginform-form {
         width: 25rem;
         position: relative; }
+        @media (max-width: 56.25em) {
+          .loginPage-container-loginform-form {
+            width: 100%; } }
         .loginPage-container-loginform-form-login {
           position: absolute;
           width: 25rem;
@@ -1172,6 +1238,10 @@ nav {
           top: 0rem;
           left: 0rem;
           transition: all .5s ease-in-out; }
+          @media (max-width: 56.25em) {
+            .loginPage-container-loginform-form-login {
+              width: 100%;
+              height: 100%; } }
           .loginPage-container-loginform-form-login > form {
             padding: 0rem 1rem;
             display: flex;
@@ -1251,6 +1321,11 @@ nav {
           width: 25rem;
           height: 35rem;
           transition: all .5s ease-in-out; }
+          @media (max-width: 56.25em) {
+            .loginPage-container-loginform-form-register {
+              left: 0;
+              width: 100%;
+              height: 100%; } }
           .loginPage-container-loginform-form-register > form {
             padding: 0rem 1rem;
             display: flex;
@@ -1412,27 +1487,59 @@ nav {
   height: 70vh;
   position: relative;
   overflow: hidden; }
+  @media (max-width: 68.75em) {
+    .Privacy-banner {
+      height: 50vh;
+      width: 100vw; } }
   .Privacy-banner-img {
     width: 100%;
     height: 100%; }
+    @media (max-width: 50em) {
+      .Privacy-banner-img {
+        height: 100%;
+        width: auto; } }
   .Privacy-banner-header {
     position: absolute;
     color: white;
     top: 10rem;
     left: 10rem;
     font-size: 3rem; }
+    @media (max-width: 68.75em) {
+      .Privacy-banner-header {
+        top: 10rem;
+        left: 2rem;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0; } }
+    @media (max-width: 50em) {
+      .Privacy-banner-header {
+        top: 7rem;
+        left: 2rem;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0; } }
 
 .Policy-desc {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column; }
+  @media (max-width: 68.75em) {
+    .Policy-desc {
+      width: 100vw; } }
   .Policy-desc > h2 {
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    padding: 0; }
   .Policy-desc > p {
     font-size: 1.2rem;
     width: 90%;
     text-align: justify; }
+    @media (max-width: 68.75em) {
+      .Policy-desc > p {
+        font-size: 1rem;
+        margin: 0rem 0rem;
+        padding: 0; } }
 
 .Item-banner {
   width: 100%;
@@ -1508,6 +1615,9 @@ nav {
   height: 100vh;
   display: flex;
   position: relative; }
+  @media (max-width: 68.75em) {
+    .head {
+      overflow: hidden; } }
   .head .left {
     width: 40%;
     display: flex;
@@ -1515,14 +1625,32 @@ nav {
     align-items: center;
     justify-content: center;
     color: #248ed9; }
+    @media (max-width: 68.75em) {
+      .head .left {
+        width: 50%; } }
+    @media (max-width: 43.75em) {
+      .head .left {
+        width: 100%; } }
     .head .left-htop {
       margin-right: 2.5rem;
       margin-bottom: 0.5rem; }
+      @media (max-width: 56.25em) {
+        .head .left-htop {
+          font-size: 1.5rem; } }
     .head .left-hbottom {
       margin-top: 0rem;
       margin-left: 4rem; }
+      @media (max-width: 56.25em) {
+        .head .left-hbottom {
+          font-size: 1.2rem; } }
   .head .right {
     width: 60%; }
+    @media (max-width: 68.75em) {
+      .head .right {
+        width: 50%; } }
+    @media (max-width: 43.75em) {
+      .head .right {
+        width: 0%; } }
     .head .right-back {
       justify-self: center;
       position: absolute;
@@ -1531,6 +1659,13 @@ nav {
       transform: translate(0%, -50%);
       width: 20rem;
       z-index: 20; }
+      @media (max-width: 43.75em) {
+        .head .right-back {
+          display: none; } }
+      @media (max-width: 68.75em) {
+        .head .right-back {
+          width: 15rem;
+          left: 50%; } }
       .head .right-back > img {
         width: 100%; }
     .head .right-top {
@@ -1540,6 +1675,9 @@ nav {
       top: 50%;
       left: 60%;
       transform: translate(-60%, -50%); }
+      @media (max-width: 56.25em) {
+        .head .right-top {
+          display: none; } }
       .head .right-top > img {
         width: 100%; }
   .head .Circle1 {
@@ -1556,3 +1694,11 @@ nav {
     width: 150px;
     height: 150px;
     transform: translate(-50%, -50%); }
+    @media (max-width: 68.75em) {
+      .head .Circle2 {
+        top: 25%;
+        left: 50%; } }
+    @media (max-width: 43.75em) {
+      .head .Circle2 {
+        top: 25%;
+        left: 100%; } }

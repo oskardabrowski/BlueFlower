@@ -7,11 +7,25 @@
       display: flex;
       justify-content: center;
 
+      @include mediaQuery(tablet900) {
+        flex-direction: column;
+        align-items: center;
+
+        margin: .5rem 0rem;
+
+        & > input {
+          width: 90%;
+        }
+      }
+
       &-selection {
         width: 15rem;
         font-size: 1rem;
         padding: 0rem 0.5rem;
         border-radius: 15px;
+        @include mediaQuery(tablet900) {
+          width: 90%;
+        }
       }
 
       &-label {
@@ -1319,14 +1333,28 @@
     border-radius: 15px;
     overflow: hidden;
 
+    @include mediaQuery(tablet900) {
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+    }
+
     &-loginform {
       display: flex;
       background-color: white;
+      @include mediaQuery(tablet900) {
+        width: 100%;
+        height: 100%;
+      }
       &-image {
         height: 35rem;
         width: 25rem;
         background-color: white;
         position: relative;
+        @include mediaQuery(tablet900) {
+          width: 0%;
+          height: 0%;
+        }
         &-loginimage {
           position: absolute;
           top: 0rem;
@@ -1334,6 +1362,9 @@
           width: 100%;
           height: 35rem;
           transition: all .5s ease-in-out;
+          @include mediaQuery(tablet900) {
+            display: none;
+          }
         }
         &-registerimage {
           position: absolute;
@@ -1343,12 +1374,19 @@
           height: 35rem;
           z-index: 100;
           transition: all .5s ease-in-out;
+          @include mediaQuery(tablet900) {
+            display: none;
+          }
         }
       }
 
       &-form {
         width: 25rem;
         position: relative;
+
+        @include mediaQuery(tablet900) {
+          width: 100%;
+        }
 
         &-login {
           position: absolute;
@@ -1357,6 +1395,11 @@
           top: 0rem;
           left: 0rem;
           transition: all .5s ease-in-out;
+          @include mediaQuery(tablet900) {
+            width: 100%;
+            height: 100%;
+          }
+          // background-color: #004974;
           & > form {
           padding: 0rem 1rem;
           display: flex;
@@ -1465,6 +1508,11 @@
           width: 25rem;
           height: 35rem;
           transition: all .5s ease-in-out;
+          @include mediaQuery(tablet900) {
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
           & > form {
           padding: 0rem 1rem;
           display: flex;
@@ -1680,9 +1728,18 @@
   position: relative;
   overflow: hidden;
 
+  @include mediaQuery(desktop1100) {
+    height: 50vh;
+    width: 100vw;
+  }
+
   &-img {
     width: 100%;
     height: 100%;
+    @include mediaQuery(tablet800) {
+      height: 100%;
+      width: auto;
+    }
   }
 
   &-header {
@@ -1691,6 +1748,20 @@
     top: 10rem;
     left: 10rem;
     font-size: 3rem;
+    @include mediaQuery(desktop1100) {
+      top: 10rem;
+      left: 2rem;
+      font-size: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    @include mediaQuery(tablet800) {
+      top: 7rem;
+      left: 2rem;
+      font-size: 2rem;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
@@ -1699,13 +1770,23 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @include mediaQuery(desktop1100) {
+    width: 100vw;
+  }
   & > h2 {
     font-size: 2rem;
+    margin: 1rem 0rem;
+    padding: 0;
   }
   & > p {
     font-size: 1.2rem;
     width: 90%;
     text-align: justify;
+    @include mediaQuery(desktop1100) {
+      font-size: 1rem;
+      margin: 0rem 0rem;
+      padding: 0;
+    }
   }
 }
 

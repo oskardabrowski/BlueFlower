@@ -74,6 +74,11 @@ nav {
     background-color: white;
     border-radius: 0px 0px 15px 0px;
     pointer-events: auto;
+
+    @include mediaQuery(phone500) {
+      width: 10rem;
+      height: 3rem;
+    }
   }
   .Menu {
     display: flex;
@@ -160,3 +165,4 @@ nav {
     }
   }
 }
+

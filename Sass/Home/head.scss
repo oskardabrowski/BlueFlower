@@ -3,6 +3,9 @@
   height: 100vh;
   display: flex;
   position: relative;
+  @include mediaQuery(desktop1100) {
+    overflow: hidden;
+  }
   .left {
     width: 40%;
     display: flex;
@@ -11,17 +14,40 @@
     justify-content: center;
     color: #248ed9;
 
+    @include mediaQuery(desktop1100) {
+      width: 50%;
+    }
+
+    @include mediaQuery(phone700) {
+      width: 100%;
+    }
+
     &-htop {
       margin-right: 2.5rem;
       margin-bottom: 0.5rem;
+      @include mediaQuery(tablet900) {
+        font-size: 1.5rem;
+      }
     }
     &-hbottom {
       margin-top: 0rem;
       margin-left: 4rem;
+      @include mediaQuery(tablet900) {
+        font-size: 1.2rem;
+      }
     }
   }
   .right {
     width: 60%;
+
+    @include mediaQuery(desktop1100) {
+      width: 50%;
+    }
+
+    @include mediaQuery(phone700) {
+      width: 0%;
+    }
+
     &-back {
       justify-self: center;
       position: absolute;
@@ -29,6 +55,17 @@
       left: 40%;
       transform: translate(-0%, -50%);
       width: 20rem;
+
+      @include mediaQuery(phone700) {
+        display: none;
+
+      }
+
+      @include mediaQuery(desktop1100) {
+        width: 15rem;
+        left: 50%;
+      }
+
       & > img {
         width: 100%;
       }
@@ -41,6 +78,10 @@
       top: 50%;
       left: 60%;
       transform: translate(-60%, -50%);
+      @include mediaQuery(tablet900) {
+        display: none;
+      }
+
       & > img {
         width: 100%;
       }
@@ -62,5 +103,14 @@
     width: 150px;
     height: 150px;
     transform: translate(-50%, -50%);
+
+    @include mediaQuery(desktop1100) {
+      top: 25%;
+      left: 50%;
+    }
+    @include mediaQuery(phone700) {
+      top: 25%;
+      left: 100%;
+    }
   }
 }
