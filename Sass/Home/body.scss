@@ -300,6 +300,10 @@
     height: 90vh;
     overflow-y: scroll;
 
+    @include mediaQuery(desktop1100) {
+      width: 100vw;
+    }
+
     &-form {
       width: 100%;
 
@@ -627,6 +631,23 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 2rem;
 
+      @include mediaQuery(desktop1100) {
+        grid-template-columns: 1fr 1.25fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      @include mediaQuery(tablet1000) {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      @include mediaQuery(tablet800) {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      @include mediaQuery(phone500) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
       &-card {
         &:first-child {
           margin-left: 2rem;
@@ -634,9 +655,17 @@
         &:last-child {
           margin-right: 2rem;
         }
-        // min-width: 20rem;
+
+        @include mediaQuery(desktop1100) {
+          margin-left: 2rem;
+          margin-right: 2rem;
+          grid-column: 2;
+          height: max-content;
+        }
+        @include mediaQuery(phone500) {
+          grid-column: 1;
+        }
         height: 90%;
-        // width: 35rem;
         border-radius: 15px;
 
         &-icon {
@@ -663,6 +692,9 @@
               margin: 2rem 0rem;
               padding-top: 2rem;
               font-size: 1.5rem;
+              @include mediaQuery(desktop1100) {
+                margin: 1rem 0rem;
+              }
 
               & > i {
                 margin-right: .5rem;
@@ -708,6 +740,10 @@
             -webkit-background-clip: text;
             color: transparent;
 
+            @include mediaQuery(phone500) {
+              font-size: 3rem;
+            }
+
           }
         }
         &-h2 {
@@ -722,6 +758,9 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+            @include mediaQuery(phone500) {
+              font-size: 2rem;
+            }
 
           }
         }
@@ -736,6 +775,12 @@
             border: 5px solid blue;
             position: relative;
 
+            @include mediaQuery(tablet1000) {
+              .UserApp-container-profile-form-photo-box-edit {
+                opacity: 1;
+              }
+            }
+
             &:hover {
               .UserApp-container-profile-form-photo-box-edit {
                 opacity: 1;
@@ -743,6 +788,9 @@
             }
             &>img {
               width: 40rem;
+              @include mediaQuery(phone500) {
+                width: 20rem;
+              }
             }
             &-edit {
               position: absolute;
@@ -780,6 +828,9 @@
             font-size: 2rem;
             font-family: 'Ubuntu';
             resize: none;
+            @include mediaQuery(phone500) {
+              font-size: 1.5rem;
+            }
           }
         }
         &-contact {
@@ -843,6 +894,12 @@
         overflow: hidden;
         position: relative;
         box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.603);
+
+        @include mediaQuery(tablet1000) {
+          .UserApp-container-announcements-item-options {
+            opacity: 1;
+          }
+        }
 
         &:hover {
           .UserApp-container-announcements-item-options {
@@ -957,6 +1014,10 @@
           background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+
+          @include mediaQuery(phone500) {
+            font-size: 2.5rem;
+          }
         }
       }
 
@@ -1043,19 +1104,32 @@
               & > span {
                 margin: 0rem 2rem;
                 font-size: 2rem;
+                @include mediaQuery(phone700) {
+                  font-size: 1rem;
+                }
               }
 
               & > h2 {
                 font-size: 2rem;
+                @include mediaQuery(phone700) {
+                  font-size: 1rem;
+                }
               }
             }
             &-months {
               font-size: 2rem;
+              @include mediaQuery(phone700) {
+                font-size: 1rem;
+              }
+
               &>input {
                 border: none;
                 outline: none;
                 width: 7.5rem;
                 border-bottom: 2px solid green;
+                @include mediaQuery(phone700) {
+                  width: 5rem;
+                }
 
                 &:focus {
                   border-bottom: 3px solid red;
@@ -1070,6 +1144,12 @@
                 margin-left: 2rem;
                 & > h1 {
                   font-size: 3rem;
+                  @include mediaQuery(phone700) {
+                    font-size: 2rem;
+                  }
+                  @include mediaQuery(phone500) {
+                    font-size: 1rem;
+                  }
                 }
 
                 & > button {
@@ -1079,6 +1159,10 @@
                   color: red;
                   font-size: 1.5rem;
 
+                  @include mediaQuery(phone700) {
+                    font-size: 1rem;
+                  }
+
                   &:hover {
                     cursor: pointer;
                   }
@@ -1087,6 +1171,10 @@
               &-image {
                 width: 10rem;
                 height: 10rem;
+                @include mediaQuery(phone700) {
+                  width: 7.5rem;
+                  height: 7.5rem;
+                }
               
                 &>img {
                   width: 100%;
@@ -1131,6 +1219,7 @@
         left: 0;
         clip-path: circle(0.0% at 0 0);
         background-color: white;
+        transition: all .5s ease-in-out;
         &-free {
           display: flex;
           flex-direction: column;
@@ -1142,11 +1231,19 @@
             background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @include mediaQuery(phone500) {
+              font-size: 2rem;
+              text-align: center;
+            }
           }
           & > h2 {
             background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @include mediaQuery(phone500) {
+              font-size: 1rem;
+            }
           }
 
           & > button {
@@ -1182,17 +1279,32 @@
             background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @include mediaQuery(phone500) {
+              font-size: 2rem;
+              text-align: center;
+            }
           }
           &-data {
+            @include mediaQuery(phone500) {
+              text-align: center;
+            }
             & > h2 {
               font-size: 2.5rem;
               background: linear-gradient(to top right, rgb(157, 0, 248), rgb(55, 182, 255));
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @include mediaQuery(phone500) {
+                font-size: 1.5rem;
+                text-align: center;
+              }
             }
 
             & > h3 {
               font-size: 2rem;
+              @include mediaQuery(phone500) {
+                font-size: 1.5rem;
+                text-align: left;
+              }
             }
 
             &>button {
@@ -1251,6 +1363,23 @@
     height: 100%;
     min-height: 90vh;
     border-right: 8px solid #004974;
+    max-width: 100%;
+
+    @include mediaQuery(desktop1100) {
+      max-width: 30%;
+      border-right: none;
+      overflow: hidden;
+      position: absolute;
+      width: 0%;
+      max-height: 90vh;
+      z-index: 1000;
+    }
+    @include mediaQuery(tablet900) {
+      max-width: 50%;
+    }
+    @include mediaQuery(phone500) {
+      max-width: 100%;
+    }
 
     & > ul {
       margin-top: 2rem;
@@ -1503,7 +1632,7 @@
         }
         &-register {
           position: relative;
-          top: -35rem;
+          top: -100%;
           left: -25rem;
           width: 25rem;
           height: 35rem;
@@ -1797,9 +1926,16 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  @include mediaQuery(desktop1100) {
+    height: 50vh;
+  }
 
   & > img {
     width: 100%;
+    @include mediaQuery(phone500) {
+      width: auto;
+      height: 100%;
+    }
   }
 }
 .Item-desc {
@@ -1808,6 +1944,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+
+
   &-article {
   width: 100%;
   display: flex;
@@ -1816,10 +1955,22 @@
   justify-content: center;
   font-size: 1.4rem;
 
+  @include mediaQuery(phone700) {
+    font-size: 1.2rem;
+
+    &>h1 {
+      font-size: 1.5rem;
+    }
+  }
+
     &-text {
       width: 90%;
       display: initial;
       text-align: justify;
+
+      &>img {
+        width: 100%;
+      }
     }
   }
 
@@ -1836,6 +1987,12 @@
       border-radius: 15px;
       overflow: hidden;
       transition: all .5s ease-in-out;
+
+      @include mediaQuery(phone700) {
+        width: 15rem;
+        height: 15rem;
+        margin: .25rem;
+      }
   
       &>img {
         width: 100%;
@@ -1855,12 +2012,22 @@
     justify-content: center;
     flex-direction: column;
 
+    @include mediaQuery(phone600) {
+      &>h1 {
+        font-size: 1.2rem;
+      }
+    }
+
     &-img {
       width: 15rem;
       height: 15rem;
       border-radius: 50%;
       overflow: hidden;
       border: 5px solid blue;
+      @include mediaQuery(phone600) {
+        width: 12rem;
+        height: 12rem;
+      }
 
       & > img {
         width: 100%;

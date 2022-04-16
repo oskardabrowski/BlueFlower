@@ -26,6 +26,7 @@
         <svg class="AccountNav-logo">
             <use xlink:href="./img/BlueFlowerLogo.svg#FlowerLogo" />
         </svg>
+        <button id="AccountMenuButton" class="AccountNav-menu"><span class="AccountNav-menu-open"><i class="fas fa-bars"></i></span><span class="AccountNav-menu-close"><i class="fas fa-times"></i></span></button>
         <div class="AccountNav-btns">
             <div class="AccountNav-btns"><i class="fas fa-shopping-cart"></i></div>
             <div class="AccountNav-btns"><i class="fas fa-comment"></i></div>
@@ -93,8 +94,8 @@
                         <button>Dodaj ogłoszenie</button>
                     </div>
                 </div>
-            </div> -->
-            <!-- <div class="UserApp-container-profile">
+            </div>
+            <div class="UserApp-container-profile">
                 <form class="UserApp-container-profile-form">
                     <div class="UserApp-container-profile-form-h1">
                         <h1>Edytuj szczegóły konta</h1>
@@ -129,8 +130,8 @@
                     </div>
                     <div class="UserApp-container-profile-form-submit"><button>Zatwierdź</button></div>
                 </form>
-            </div> -->
-            <!-- <div class="UserApp-container-announcements">
+            </div>
+            <div class="UserApp-container-announcements">
                 <div class="UserApp-container-announcements-item">
                     <div class="UserApp-container-announcements-item-image">
                         <img src="./img/items/book.jpg" alt="image" />
@@ -251,8 +252,8 @@
                         <button><i class="fas fa-trash"></i></button>
                     </div>
                 </div>
-            </div> -->
-            <!-- <div class="UserApp-container-payments">
+            </div>
+            <div class="UserApp-container-payments">
                 <div class="UserApp-container-payments-payment">
                     <div>
                         <div>Kwota: 100zł</div>
@@ -277,8 +278,8 @@
                     </div>
                     <div class="UserApp-container-payments-payment-remove"><i class="fas fa-trash"></i></div>
                 </div>
-            </div> -->
-            <!-- <div class="UserApp-container-changePassword">
+            </div>
+            <div class="UserApp-container-changePassword">
                 <div class="UserApp-container-changePassword-header"><h1>Zmień swoje hasło</h1></div>
                 <form>
                     <label>Stare hasło:</label>
@@ -421,7 +422,7 @@
                         </div>
                     </div>
                     <div class="UserApp-container-cart-items-btn">
-                        <button>Następny krok<i class="fas fa-arrow-alt-circle-right"></i></button>
+                        <button class="UserApp-container-cart-items-btn-button">Następny krok<i class="fas fa-arrow-alt-circle-right"></i></button>
                     </div>
                 </div>
                 <div class="UserApp-container-cart-payment">
@@ -451,10 +452,10 @@
                             Srtipe payments
                         </div>
                     </div>
-                    <div class="UserApp-container-cart-payment-paid-back"><button><i class="fas fa-arrow-alt-circle-left"></i>Wróć do koszyka</button></div>
+                    <div class="UserApp-container-cart-payment-paid-back"><button class="UserApp-container-cart-payment-paid-back-btn"><i class="fas fa-arrow-alt-circle-left"></i>Wróć do koszyka</button></div>
                 </div>
             </div> -->
-            <!-- <div class="UserApp-container-chat">
+            <div class="UserApp-container-chat">
                 <div class="UserApp-container-chat-messages">
                     <div class="UserApp-container-chat-messages-window">
                         <div class="UserApp-container-chat-messages-window-mesfrom">
@@ -671,8 +672,8 @@
                         <button class="UserApp-container-chat-friends-friend-block"><i class="fas fa-ban"></i><span>Block</span></button>
                     </div>
                 </div>
-            </div> -->
-            <!-- <div class="UserApp-container-form">
+            </div>
+            <div class="UserApp-container-form">
                 <h1 class="UserApp-container-form-header header-style">Dodaj nową ofertę</h1>
                 <form>
                     <label>Nazwa oferty: </label>
@@ -687,8 +688,8 @@
                     <input type="text" placeholder="Dobry stan" />
                     <button>Dodaj</button>
                 </form>
-            </div> -->
-            <!-- <div class="UserApp-container-edit">
+            </div>
+            <div class="UserApp-container-edit">
                 <h1 class="UserApp-container-edit-header header-style">Edytuj ofertę</h1>
                 <form>
                     <label>Edytuj nazwę oferty: </label>
@@ -739,10 +740,11 @@
                     <input type="text" placeholder="Dobry stan" />
                     <button>Zapisz zmiany</button>
                 </form>
-            </div> -->
+            </div>
         </div>
     </article>
 </body>
 <script src="./js/menu.js"></script>
+<script src="./js/cart.js"></script>
 <script src="./vendors/summernote/summernote.init.js"></script>
 </html>

@@ -135,6 +135,32 @@ nav {
     width: 12rem;
     height: 5rem;
     margin-left: 1rem;
+
+    @include mediaQuery(desktop1100) {
+      display: none;
+    }
+  }
+
+  &-menu {
+    display: none;
+    height: 100%;
+    width: auto;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+
+    @include mediaQuery(desktop1100) {
+      display: initial;
+    }
+
+    &-open {
+      display: initial;
+      margin: 0rem 2.5rem;
+    }
+    &-close {
+      display: none;
+      margin: 0rem 2.5rem;
+    }
   }
 
   &-btns {
