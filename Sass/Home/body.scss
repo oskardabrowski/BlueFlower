@@ -314,12 +314,20 @@
 
       &-header {
         font-size: 4rem;
+
+        @include mediaQuery(phone600) {
+          font-size: 3rem;
+        }
       }
 
       & > form {
         width: 90%;
         display: flex;
         flex-direction: column;
+
+        @include mediaQuery(phone600) {
+          width: 100%;
+        }
 
         & > label {
           margin: 2rem 0rem 1rem 0rem;
@@ -395,6 +403,9 @@
             align-items: center;
             justify-content: center;
             transition: all .5s ease-in-out;
+            @include mediaQuery(phone600) {
+              opacity: 1;
+            }
 
             & > i {
               background-color: white;
@@ -413,12 +424,19 @@
 
       &-header {
         font-size: 4rem;
+        @include mediaQuery(phone600) {
+          font-size: 3rem;
+        }
       }
 
       & > form {
         width: 90%;
         display: flex;
         flex-direction: column;
+
+        @include mediaQuery(phone600) {
+          width: 100%;
+        }
 
         & > img {
           align-self: center;
@@ -464,6 +482,10 @@
       width: 100%;
       height: 100%;
       display: flex;
+
+      @include mediaQuery(tablet1000) {
+        flex-direction: column-reverse;
+      }
       &-messages {
         width: 80%;
         display: flex;
@@ -471,6 +493,10 @@
         align-items: center;
         justify-content: center;
 
+        @include mediaQuery(tablet1000) {
+          width: 100%;
+          border-top: 2px solid black;
+        }
 
         &-window {
           height: 50rem;
@@ -490,6 +516,7 @@
             border-radius: 15px 15px 15px 0px;
             font-size: 1.75rem;
             max-width: 30rem;
+            margin: .5rem 0rem;
           }
           &-mesfrom {
             background-color: #9c9c9c;
@@ -500,6 +527,7 @@
             border-radius: 15px 15px 0px 15px;
             font-size: 1.75rem;
             max-width: 30rem;
+            margin: .5rem 0rem;
           }
         }
         &-form {
@@ -542,6 +570,9 @@
         flex-direction: column;
         align-items: center;
         overflow-y: scroll;
+        @include mediaQuery(tablet1000) {
+          width: 100%;
+        }
         &-friend {
           width: 95%;
           border-top: 1px solid rgba(0, 0, 0, 0.5);
