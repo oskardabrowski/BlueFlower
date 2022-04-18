@@ -739,16 +739,18 @@
         }
         &-button {
           margin: 3rem 0rem;
-          & > button {
+          & > a {
             padding: 1.2rem;
             font-size: 1.5rem;
             border: none;
             border-radius: 15px;
             background: linear-gradient(to top, rgb(0, 182, 0), rgb(58, 207, 58));
             color: white;
+            text-decoration: none;
 
             &:hover {
               cursor: pointer;
+              text-decoration: none;
             }
           }
         }
@@ -983,6 +985,26 @@
           opacity: 0;
           transition: all .5s ease-in-out;
           & > button {
+            margin: 1rem 0rem;
+            width: 7.5rem;
+            height: 7.5rem;
+            background-color: #36a7e9;
+            border: none;
+            border-radius: 50rem;
+            color: white;
+            transition: all .5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              color: black;
+            }
+            & > i {
+              font-size: 3rem;
+            }
+          }
+          & > a {
             margin: 1rem 0rem;
             width: 7.5rem;
             height: 7.5rem;
@@ -1424,6 +1446,15 @@
         position: relative;
         font-size: 1.8rem;
 
+        & > a {
+          color: white;
+          text-decoration: none;
+
+          &>i {
+            margin-right: .5rem;
+          }
+        }
+
         &:hover {
           cursor: pointer;
           &::before {
@@ -1455,9 +1486,7 @@
           height: .25rem;
           transition: all .5s ease-in-out;
         }
-        & > i {
-          margin-right: .5rem;
-        }
+
       }
     }
   }
@@ -1477,7 +1506,7 @@
 
 .loginPage {
   background-color: #5bc3ff;
-  background-image: url('./../../img/login/loginBack.jpg');
+  background-image: url('../img/login/loginBack.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

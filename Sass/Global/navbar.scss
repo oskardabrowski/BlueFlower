@@ -116,6 +116,20 @@ nav {
       font-size: 1.5rem;
       pointer-events: auto;
     }
+    & > a {
+      margin: 0rem 0rem 0rem 0.75rem;
+      padding: 0.5rem;
+      background-color: rgb(255, 255, 255);
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      pointer-events: auto;
+      color: black;
+      text-decoration: none;
+    }
   }
 }
 
@@ -166,13 +180,15 @@ nav {
   &-btns {
     display: flex;
 
-    & > div {
+    & > a {
       margin: 0rem 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 3rem;
       position: relative;
+      color: black;
+      text-decoration: none;
 
       & > span {
         position: absolute;
@@ -187,6 +203,8 @@ nav {
 
       &:hover {
         cursor: pointer;
+        color: black;
+        text-decoration: none;
       }
     }
 

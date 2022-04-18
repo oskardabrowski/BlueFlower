@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 17.5rem;
-  background-image: url("../../img/wave.svg");
+  background-image: url("../img/wave.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
@@ -199,6 +199,19 @@ nav {
       justify-content: center;
       font-size: 1.5rem;
       pointer-events: auto; }
+    nav .Menu > a {
+      margin: 0rem 0rem 0rem 0.75rem;
+      padding: 0.5rem;
+      background-color: white;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      pointer-events: auto;
+      color: black;
+      text-decoration: none; }
 
 .AccountNav {
   width: 100%;
@@ -236,14 +249,16 @@ nav {
       margin: 0rem 2.5rem; }
   .AccountNav-btns {
     display: flex; }
-    .AccountNav-btns > div {
+    .AccountNav-btns > a {
       margin: 0rem 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 3rem;
-      position: relative; }
-      .AccountNav-btns > div > span {
+      position: relative;
+      color: black;
+      text-decoration: none; }
+      .AccountNav-btns > a > span {
         position: absolute;
         top: 0;
         left: -.5rem;
@@ -252,8 +267,10 @@ nav {
         padding: .25rem .75rem;
         border-radius: 50%;
         color: white; }
-      .AccountNav-btns > div:hover {
-        cursor: pointer; }
+      .AccountNav-btns > a:hover {
+        cursor: pointer;
+        color: black;
+        text-decoration: none; }
     .AccountNav-btns-photo {
       border-radius: 50%;
       overflow: hidden;
@@ -798,15 +815,17 @@ nav {
                 border-top: 1px solid black; }
         .UserApp-container-cards-card-button {
           margin: 3rem 0rem; }
-          .UserApp-container-cards-card-button > button {
+          .UserApp-container-cards-card-button > a {
             padding: 1.2rem;
             font-size: 1.5rem;
             border: none;
             border-radius: 15px;
             background: linear-gradient(to top, #00b600, #3acf3a);
-            color: white; }
-            .UserApp-container-cards-card-button > button:hover {
-              cursor: pointer; }
+            color: white;
+            text-decoration: none; }
+            .UserApp-container-cards-card-button > a:hover {
+              cursor: pointer;
+              text-decoration: none; }
     .UserApp-container-profile-form-h1 {
       width: 100%;
       display: flex;
@@ -986,6 +1005,22 @@ nav {
             .UserApp-container-announcements-item-options > button:hover {
               color: black; }
             .UserApp-container-announcements-item-options > button > i {
+              font-size: 3rem; }
+          .UserApp-container-announcements-item-options > a {
+            margin: 1rem 0rem;
+            width: 7.5rem;
+            height: 7.5rem;
+            background-color: #36a7e9;
+            border: none;
+            border-radius: 50rem;
+            color: white;
+            transition: all .5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .UserApp-container-announcements-item-options > a:hover {
+              color: black; }
+            .UserApp-container-announcements-item-options > a > i {
               font-size: 3rem; }
     .UserApp-container-payments {
       margin-top: 5rem;
@@ -1303,6 +1338,11 @@ nav {
         font-weight: 500;
         position: relative;
         font-size: 1.8rem; }
+        .UserApp-menu > ul > li > a {
+          color: white;
+          text-decoration: none; }
+          .UserApp-menu > ul > li > a > i {
+            margin-right: .5rem; }
         .UserApp-menu > ul > li:hover {
           cursor: pointer; }
           .UserApp-menu > ul > li:hover::before {
@@ -1327,8 +1367,6 @@ nav {
           background-color: white;
           height: .25rem;
           transition: all .5s ease-in-out; }
-        .UserApp-menu > ul > li > i {
-          margin-right: .5rem; }
 
 .CardFree {
   background: linear-gradient(to top right, #94ff63, #ffc011); }
@@ -1341,7 +1379,7 @@ nav {
 
 .loginPage {
   background-color: #5bc3ff;
-  background-image: url("./../../img/login/loginBack.jpg");
+  background-image: url("../img/login/loginBack.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

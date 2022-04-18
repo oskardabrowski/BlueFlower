@@ -1,67 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link href="./img/BlueFlowerIco.png" rel="icon" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
-        rel="stylesheet">
-    <title>Blue Flower</title>
-</head>
-
-<body>
-    <nav>
-        <svg class="LogoContainer">
-            <use xlink:href="./img/BlueFlowerLogo.svg#FlowerLogo" />
-        </svg>
-        <div class="Menu">
-            <div  class="Menu-blog">
-                <i class="fab fa-blogger-b"></i>
-            </div>
-            <div  class="Menu-account">
-                <i class="fas fa-user"></i>
-            </div>
-            <div  class="Menu-Button">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-        <div class="menu-container">
-            <div class="menu-container-close"><i class="fas fa-times"></i></div>
-            <div class="menu-container-btns">
-                <div class="menu-container-btns-btn">
-                    <div class="menu-container-btns-btn-link"><a href="#">Strona główna</a></div>
-                    <div class="menu-container-btns-btn-link"><a href="#">O nas</a></div>
-                    <div class="menu-container-btns-btn-link"><a href="#">Blog</a></div>
-                    <div class="menu-container-btns-btn-link"><a href="#">Logowanie</a></div>
-                    <div class="menu-container-btns-btn-link"><a href="#">Konto</a></div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <header class="head">
-        <div class="left">
-            <h1 class="left-htop">Najprzyjaźniejsza strona</h1>
-            <h2 class="left-hbottom">z ogłoszeniami w internecie</h2>
-            <a class="left-button button-style" href="#">Poznaj nas lepiej</a>
-        </div>
-        <div class="right">
-            <div class="right-back">
-                <img src="./img/BF2.jpg" alt="Flower1" />
-            </div>
-            <div class="right-top">
-                <img src="./img/BF1.jpg" alt="Flower2" />
-            </div>
-        </div>
-        <img class="Circle1" src="./img/Circle1.png" alt="Circle1" />
-        <img class="Circle2" src="./img/Circle2.png" alt="Circle2" />
-    </header>
     <article class="items">
         <div class="items-headerdiv">
             <h1 class="items-header header-style">Najnowsze ogłoszenia</h1>
@@ -147,10 +83,8 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
@@ -197,10 +131,8 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
@@ -247,10 +179,8 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
@@ -297,10 +227,8 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
@@ -347,10 +275,8 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
@@ -397,10 +323,8 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
@@ -447,10 +371,8 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
@@ -497,40 +419,11 @@
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
                                 555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i
-                                    class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
                         </div>
                     </div>
                 </div>
             </a>
         </div>
     </article>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-container-media">
-                <div>
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-user-secret"></i>Polityka prywatności</a></li>
-                        <li><i class="fas fa-phone"></i>Tel: 666 666 666</li>
-                        <li><i class="fas fa-envelope"></i>Mail: office@blueflower.pl</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-container-copy">
-                <div>Copyright &copy; BlueFlower <span>2022</span></div>
-                <div>Created with Font Awesome</div>
-            </div>
-        </div>
-    </footer>
-</body>
-<script src="./js/menu.js"></script>
-</html>
