@@ -1,9 +1,9 @@
-const LoginImage = document.querySelector(".LoginImage")
-const RegisterImage = document.querySelector(".RegisterImage")
-const LoginForm = document.querySelector(".LoginForm")
-const RegisterForm = document.querySelector(".RegisterForm")
-const GoToRegister = document.querySelector(".GoToRegister")
-const GoToLogin = document.querySelector(".GoToLogin")
+const LoginImage = document.querySelector(".LoginImage");
+const RegisterImage = document.querySelector(".RegisterImage");
+const LoginForm = document.querySelector(".LoginForm");
+const RegisterForm = document.querySelector(".RegisterForm");
+const GoToRegister = document.querySelector(".GoToRegister");
+const GoToLogin = document.querySelector(".GoToLogin");
 
 GoToRegister.addEventListener('click', function() {
     LoginImage.style.top = "100%";
