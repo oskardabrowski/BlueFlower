@@ -1,5 +1,9 @@
 <?php include "./inc/head.php"; ?>
 
+<?php require "./models/database.php"; ?>
+<?php require "./models/dbconfig.php"; ?>
+<?php require "./models/Announcements.php"; ?>
+
 <body>
     <?php include "./inc/nav.php"; ?>
     <?php include "./inc/homeHead.php"; ?>

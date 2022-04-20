@@ -1,6 +1,7 @@
 <div class="UserApp-menu">
     <ul>
         <li><a href="?page=home"><i class="fas fa-home"></i>Strona główna</a></li>
+        <li><a href="index.php"><i class="fas fa-link"></i>Strona z ogłoszeniami</a></li>
         <li><a href="?page=profile"><i class="fas fa-user"></i>Mój profil</a></li>
         <li><a href="?page=form"><i class="fas fa-plus-circle"></i>Dodaj ogłoszenie</a></li>
         <li><a href="?page=announcements"><i class="fas fa-bullhorn"></i>Moje ogłoszenia</a></li>
