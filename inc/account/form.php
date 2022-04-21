@@ -9,14 +9,14 @@
         </select>
         <label>Klasa oferty: </label>
         <select>
-            <option>Inne</oprion>
-            <option>Samochody</oprion>
-            <option>Kryptowaluty</oprion>
-            <option>Praca</oprion>
-            <option>Elektronika</oprion>
-            <option>Jedzenie</oprion>
-            <option>Odzież</oprion>
-            <option>AGD</oprion>
+            <option value="other">Inne</oprion>
+            <option value="cars">Samochody</oprion>
+            <option value="crypto">Kryptowaluty</oprion>
+            <option value="soft">Oprogramowanie</oprion>
+            <option value="electronic">Elektronika</oprion>
+            <option value="meal">Jedzenie</oprion>
+            <option value="clothes">Odzież</oprion>
+            <option value="agd">AGD</oprion>
         </select>
         <label>Nazwa oferty: </label>
         <input type="text" placeholder="Samochód na sprzedaż" />

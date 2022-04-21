@@ -3,6 +3,7 @@
 <?php require "./models/database.php"; ?>
 <?php require "./models/dbconfig.php"; ?>
 <?php require "./models/Announcements.php"; ?>
+<?php require "./models/Users.php"; ?>
 
 <body>
     <?php include "./inc/nav.php"; ?>

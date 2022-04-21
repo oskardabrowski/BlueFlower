@@ -1,10 +1,7 @@
 <?php
-
 $items = new Announcements();
-
+$user = new User();
 $announcements = $items->SelectAllAnnouncements();
-
-echo json_encode($announcements);
 ?>
 
 <article class="items">
@@ -41,7 +38,7 @@ echo json_encode($announcements);
                 <option>Inne</option>
                 <option>Samochody</option>
                 <option>Kryptowaluty</option>
-                <option>Praca</option>
+                <option>Oprogramowanie</option>
                 <option>Elektronika</option>
                 <option>Jedzenie</option>
                 <option>Odzież</option>
@@ -436,49 +433,47 @@ echo json_encode($announcements);
         </a>
 
         <?php foreach ($announcements as $a) : ?>
+            <?php
+            $user_data;
+            $user_contact;
+
+            if ($a->ann_user) {
+                $ann_user = $user->SelectUserByUniq($a->ann_user);
+                $user_data = $ann_user[0];
+            }
+            $user_contact = json_decode($user_data->user_contact);
+            ?>
             <a href="#" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
-                            <img src="./img/items/<?php echo $a->ann_img_general ?>" alt="book" />
+                            <img src="./img/items/<?php echo $a->ann_img_general; ?>" alt="book" />
                         </div>
-                        <div class="items-container-item-rotate-front-title other-background other-path">
+                        <div class="items-container-item-rotate-front-title <?php echo $a->ann_type; ?>-background <?php echo $a->ann_type; ?>-path">
                             <h2><?php echo $a->ann_title; ?></h2>
                         </div>
                         <div class="items-container-item-rotate-front-desc">
                             <p>
-                                Rub face on owner run as fast as i can into another room for no reason and be a nyan
-                                cat, feel great about
-                                it, be
-                                annoying 24/7 poop rainbows in litter box all day or walk on keyboard meow go back to
-                                sleep owner brings
-                                food and water
-                                tries to pet on head, so scratch get sprayed by water because bad cat or sleeps on my
-                                head. All of a sudden
-                                cat goes
-                                crazy eat prawns daintily with a claw then
+                                <?php echo $a->ann_desc; ?>
                             </p>
                         </div>
-                        <div class="items-container-item-rotate-front-footer other-background">$12/one</div>
+                        <div class="items-container-item-rotate-front-footer <?php echo $a->ann_type; ?>-background"><?php echo $a->ann_footer; ?></div>
                     </div>
-                    <div class="items-container-item-rotate-back other-background">
+                    <div class="items-container-item-rotate-back <?php echo $a->ann_type; ?>-background">
                         <div class="items-container-item-rotate-back-photo">
                             <div class="items-container-item-rotate-back-photo-container">
-                                <img src="./img/users/Alexander.jpg" alt="user-image" />
+                                <img src="./img/users/<?php echo $user_data->user_photo; ?>" alt="user-image" />
                             </div>
-                            <span class="items-container-item-rotate-back-photo-username">Alexander</span>
+                            <span class="items-container-item-rotate-back-photo-username"><?php echo $user_data->user_name; ?></span>
                         </div>
                         <div class="items-container-item-rotate-back-content">
-                            Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace
-                            holystone mizzenmast quarter crow's
-                            nest nipperkin grog yardarm hempen halter furl.
+                            <?php echo $user_data->user_desc; ?>
                         </div>
                         <div class="items-container-item-rotate-back-contact">
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i>
-                                555 555 555</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i>alexander@mail.com</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i>11-223, Roma Street, Melbourne Australia</span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i><?php echo $user_contact->tel; ?></span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i><?php echo $user_data->user_email; ?></span>
+                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i><?php echo $user_contact->address; ?></span>
                         </div>
                     </div>
                 </div>
