@@ -1,6 +1,9 @@
 <?php include "./inc/head.php"; ?>
 
 <body class="loginPage">
+    <div class="loginPage-msg">
+        <h2>Sukces</h2>
+    </div>
     <div class="loginPage-container">
         <div class="loginPage-container-loginform">
             <div class="loginPage-container-loginform-image">

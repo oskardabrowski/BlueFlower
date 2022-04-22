@@ -1,4 +1,5 @@
 const buttonFormSubmit = document.querySelector('.buttonFormSubmit');
+const RegisterFormData = document.querySelector('.RegisterFormData');
 const RegisterEmail = document.querySelector('.RegisterEmail');
 const RegisterPassword = document.querySelector('.RegisterPassword');
 const RegisterPasswordRepeat = document.querySelector('.RegisterPasswordRepeat');
@@ -12,6 +13,8 @@ const RegisterSuccessPasswordBoth = document.querySelector('.RegisterSuccessPass
 const RegisterDangerEmail = document.querySelector('.RegisterDangerEmail');
 const RegisterDangerEmailExists = document.querySelector('.RegisterDangerEmailExists');
 const RegisterSuccessEmail = document.querySelector('.RegisterSuccessEmail');
+
+const Message = document.querySelector('.loginPage-msg');
 
 let passTested = false, passBoth = false, emailNotInDB = false;
 
@@ -77,12 +80,43 @@ RegisterPasswordRepeat.addEventListener('change', function() {
     }
 });
 
-buttonFormSubmit.addEventListener('click', function() {
+buttonFormSubmit.addEventListener('click', function(e) {
+    e.preventDefault();
     const RegisterEmailValue = RegisterEmail.value;
     const RegisterPasswordValue = RegisterPassword.value;
-    const RegisterPasswordRepeatValue = RegisterPasswordRepeat.value;
 
+    if(passTested && passBoth && emailNotInDB) {
+        const registerData = new FormData();
+        registerData.set('email', RegisterEmailValue);
+        registerData.set('password', RegisterPasswordValue);;
 
+        async function createUser() {
+            const response = await fetch('./php/createUser.php', {
+                method: 'POST',
+                body: registerData
+            });
+            const data = await response.json();
+            if(data.msg === 'UserCreated') {
+                Message.style.opacity = "1";
+                Message.querySelector('h2').textContent = "Sukces! Teraz możesz się zalogować";
+                Message.classList.add('LoginMsgSuccess');
+                RegisterEmail.value = '';
+                RegisterPassword.value = '';
+                RegisterPasswordRepeat.value = '';
+
+                RegisterSuccessPassword.style.display = "none";
+                RegisterSuccessPasswordBoth.style.display = "none";
+                RegisterSuccessEmail.style.display = "none";
+            } else if (data.msg === 'WrongInDb') {
+                Message.style.opacity = "1";
+                Message.querySelector('h2').textContent = "Coś poszło nie tak! Problem z połączeniem z bazą danych";
+                Message.classList.add('LoginMsgDanger');
+            } else {
+                Message.style.opacity = "1";
+                Message.querySelector('h2').textContent = "Coś poszło nie tak! Sprubój pownownie!";
+                Message.classList.add('LoginMsgDanger');
+            }
+        }
+        createUser();
+    }
 })
-
-
