@@ -1,4 +1,12 @@
 <?php include "./inc/head.php"; ?>
+<?php require './models/session_helper.php'; ?>
+<?php
+
+if (isset($_SESSION['id'])) {
+    header('Location: ./account.php');
+}
+?>
+
 
 <body class="loginPage">
     <div class="loginPage-msg">
@@ -17,14 +25,14 @@
                         <h1>Login</h1>
                     </div>
                     <form>
-                        <label for="email">Email: </label>
-                        <input id="email" type="email" placeholder="jan.kowalski@email.com" />
+                        <label for="loginemail">Email: </label>
+                        <input class="LoginInputEmail" id="loginemail" type="email" placeholder="jan.kowalski@email.com" />
                         <span class="LoginDangerEmail"><i class="fas fa-times"></i>Proszę wpisz poprawny email</span>
                         <span class="LoginSuccessEmail"><i class="fas fa-check"></i>Email poprawny</span>
-                        <label for="password">Hasło: </label>
-                        <input id="password" type="password" />
+                        <label for="loginpassword">Hasło: </label>
+                        <input class="LoginInputPassword" id="loginpassword" type="password" />
                         <span class="LoginDangerPassword"><i class="fas fa-times"></i>Proszę wpisz poprawne hasło</span>
-                        <button>Zaloguj</button>
+                        <button class="LoginButton">Zaloguj</button>
                     </form>
                     <div class="loginPage-container-loginform-form-login-noaccount">
                         <span>Nie masz konta?</span>
@@ -42,12 +50,12 @@
                         <span class="RegisterDangerEmail"><i class="fas fa-times"></i>Proszę wpisz poprawny email</span>
                         <span class="RegisterDangerEmailExists"><i class="fas fa-times"></i>Email jest zajęty</span>
                         <span class="RegisterSuccessEmail"><i class="fas fa-check"></i>Email poprawny</span>
-                        <label for="password">Hasło: </label>
-                        <input id="password" class="RegisterPassword" type="password" />
+                        <label for="firstpassword">Hasło: </label>
+                        <input id="firstpassword" class="RegisterPassword" type="password" />
                         <span class="RegisterDangerPassword"><i class="fas fa-times"></i>Hasło powinno zawierać conajmniej jedną dużą literę i znak specjalny z wymienionych: #!?@$%&</span>
                         <span class="RegisterSuccessPassword"><i class="fas fa-check"></i>Hasło poprawne</span>
-                        <label for="password">Powtórz hasło: </label>
-                        <input id="password" class="RegisterPasswordRepeat" type="password" />
+                        <label for="secondpassword">Powtórz hasło: </label>
+                        <input id="secondpassword" class="RegisterPasswordRepeat" type="password" />
                         <span class="RegisterSuccessPasswordBoth"><i class="fas fa-check"></i>Hasła poprawne</span>
                         <span class="RegisterDangerPasswordBoth"><i class="fas fa-times"></i>Hasła nie są jednakowe</span>
                         <button class="buttonFormSubmit">Zarejestruj</button>

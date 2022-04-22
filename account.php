@@ -1,11 +1,14 @@
 <?php include "./inc/account/accountHead.php"; ?>
+<?php require "./models/session_helper.php"; ?>
 <?php
 
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 }
 
-
+if (empty($_SESSION['id'])) {
+    header('Location: ./login.php');
+}
 
 ?>
 
@@ -52,22 +55,7 @@ if (isset($_GET['page'])) {
                         break;
                 }
             }
-
-
-
-
-
-
-
             ?>
-
-
-
-
-
-
-
-
         </div>
     </article>
 </body>

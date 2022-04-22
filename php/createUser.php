@@ -5,7 +5,7 @@ require '../models/Users.php';
 
 $user = new User();
 
-$email = $_POST['email'];
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 $password = $_POST['password'];
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 $uniq = uniqid($email);

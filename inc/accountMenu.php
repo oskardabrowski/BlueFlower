@@ -7,6 +7,6 @@
         <li><a href="?page=announcements"><i class="fas fa-bullhorn"></i>Moje ogłoszenia</a></li>
         <li><a href="?page=payments"><i class="far fa-credit-card"></i>Moje płatności</a></li>
         <li><a href="?page=changePassword"><i class="fas fa-lock"></i>Zmiana hasła</a></li>
-        <li><a href="#"><i class="fas fa-sign-out-alt"></i>Wyloguj</a></li>
+        <li><a href="./php/logout.php"><i class="fas fa-sign-out-alt"></i>Wyloguj</a></li>
     </ul>
 </div>
