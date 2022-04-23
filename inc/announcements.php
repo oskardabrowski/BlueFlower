@@ -463,7 +463,7 @@ $announcements = $items->SelectAllAnnouncements();
                         <div class="items-container-item-rotate-back-photo">
                             <div class="items-container-item-rotate-back-photo-container">
                                 <?php if ($user_data->user_photo !== '') : ?>
-                                    <img src="./img/users/Alex.jpg" alt="user-img" />
+                                    <img src="./img/users/<?php echo $a->ann_user; ?>/<?php echo $user_data->user_photo; ?>" alt="user-img" />
                                 <?php else : ?>
                                     <img src="./img/default.jpg" alt="user-img" />
                                 <?php endif; ?>
@@ -475,9 +475,13 @@ $announcements = $items->SelectAllAnnouncements();
                         </div>
                         <div class="items-container-item-rotate-back-contact">
                             <span class="items-container-item-rotate-back-contact-header">Contact</span>
-                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i><?php echo $user_contact->tel; ?></span>
+                            <?php if ($user_contact && $user_contact->tel) : ?>
+                                <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-phone"></i><?php echo $user_contact->tel; ?></span>
+                            <?php endif; ?>
                             <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-envelope"></i><?php echo $user_data->user_email; ?></span>
-                            <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i><?php echo $user_contact->address; ?></span>
+                            <?php if ($user_contact && $user_contact->address) : ?>
+                                <span class="items-container-item-rotate-back-contact-method"><i class="fas fa-map-marker-alt"></i><?php echo $user_contact->address; ?></span>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

@@ -2180,3 +2180,32 @@
   }
 }
 
+.d-none {
+  display: none;
+}
+
+.msgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+  width: 100%;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  font-family: 'work Sans';
+  pointer-events: none;
+  animation: opacity 5s normal forwards;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

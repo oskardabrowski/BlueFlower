@@ -67,5 +67,7 @@ if (empty($_SESSION['id'])) {
 <script src="./js/cart.js"></script>
 <script src="./vendors/summernote/summernote.init.js"></script>
 <script src="./js/changeUserPhoto.js"></script>
+<script src="./js/removePhoto.js"></script>
+<script src="./js/updateDetails.js"></script>
 
 </html>

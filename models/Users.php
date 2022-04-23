@@ -38,4 +38,41 @@ class User
         $this->db->bind(':id', $id);
         return $this->db->single();
     }
+
+    public function UpdateUserImage($name, $uniq)
+    {
+        $this->db->query('UPDATE users SET user_photo = :photo WHERE user_uniq = :uniq');
+        $this->db->bind(':photo', $name);
+        $this->db->bind(':uniq', $uniq);
+        return $this->db->execute();
+    }
+
+    public function UpdateUserDetails($id, $email, $desc, $contact)
+    {
+        $this->db->query('UPDATE users SET user_email = :email, user_desc = :desc, user_contact = :contact WHERE user_id = :id');
+        $this->db->bind(':id', $id);
+        $this->db->bind(':email', $email);
+        $this->db->bind(':desc', $desc);
+        $this->db->bind(':contact', $contact);
+        return $this->db->execute();
+    }
+
+    public function uploadImage($name, $tmp_name, $size, $path)
+    {
+        $supported = array('jpg', 'jpeg', 'png');
+        $extension = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        if (in_array($extension, $supported)) {
+            if ($size < 5000000) {
+                if (move_uploaded_file($tmp_name, $path)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }
