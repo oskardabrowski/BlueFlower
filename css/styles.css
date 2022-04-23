@@ -826,116 +826,153 @@ nav {
             .UserApp-container-cards-card-button > a:hover {
               cursor: pointer;
               text-decoration: none; }
-    .UserApp-container-profile-form-h1 {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .UserApp-container-profile-form-h1 > h1 {
-        font-weight: 600;
-        background: linear-gradient(to top right, #9d00f8, #37b6ff);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent; }
-        @media (max-width: 31.25em) {
-          .UserApp-container-profile-form-h1 > h1 {
-            font-size: 3rem; } }
-    .UserApp-container-profile-form-h2 {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .UserApp-container-profile-form-h2 > h2 {
-        font-weight: 400;
-        background: linear-gradient(to top right, #9d00f8, #37b6ff);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent; }
-        @media (max-width: 31.25em) {
-          .UserApp-container-profile-form-h2 > h2 {
-            font-size: 2rem; } }
-    .UserApp-container-profile-form-photo {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .UserApp-container-profile-form-photo-box {
-        border-radius: 100rem;
-        overflow: hidden;
-        border: 5px solid blue;
-        position: relative; }
-        @media (max-width: 62.5em) {
-          .UserApp-container-profile-form-photo-box .UserApp-container-profile-form-photo-box-edit {
-            opacity: 1; } }
-        .UserApp-container-profile-form-photo-box:hover .UserApp-container-profile-form-photo-box-edit {
-          opacity: 1; }
-        .UserApp-container-profile-form-photo-box > img {
-          width: 40rem; }
-          @media (max-width: 31.25em) {
-            .UserApp-container-profile-form-photo-box > img {
-              width: 20rem; } }
-        .UserApp-container-profile-form-photo-box-edit {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background-color: #00497485;
-          z-index: 100;
+    .UserApp-container-profile {
+      position: relative; }
+      .UserApp-container-profile-changePhoto {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none; }
+        .UserApp-container-profile-changePhoto-box {
+          background-color: white;
+          padding: 1rem;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
-          opacity: 0;
-          transition: all .5s ease-in-out; }
-          .UserApp-container-profile-form-photo-box-edit > button {
-            width: 5rem;
-            height: 5rem;
-            font-size: 2rem;
-            margin: 1rem;
+          justify-content: center; }
+          .UserApp-container-profile-changePhoto-box > form > button {
+            margin-top: .5rem;
+            background: linear-gradient(to top right, #36a7e9, #0573b3);
             border: none;
-            border-radius: 50%;
-            background: #0062a8;
+            padding: 1rem;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-family: 'Ubuntu';
             color: white; }
-    .UserApp-container-profile-form-desc {
-      width: 100%; }
-      .UserApp-container-profile-form-desc > textarea {
+            .UserApp-container-profile-changePhoto-box > form > button:hover {
+              background: #004974; }
+          .UserApp-container-profile-changePhoto-box > span {
+            align-self: flex-end;
+            justify-self: end; }
+            .UserApp-container-profile-changePhoto-box > span:hover {
+              cursor: pointer; }
+      .UserApp-container-profile-form-h1 {
         width: 100%;
-        font-size: 2rem;
-        font-family: 'Ubuntu';
-        resize: none; }
-        @media (max-width: 31.25em) {
-          .UserApp-container-profile-form-desc > textarea {
-            font-size: 1.5rem; } }
-    .UserApp-container-profile-form-contact {
-      display: flex;
-      flex-direction: column; }
-      .UserApp-container-profile-form-contact > label {
-        margin-left: 2rem;
-        margin-top: 2rem;
-        font-size: 2rem; }
-      .UserApp-container-profile-form-contact > input {
-        padding: .75rem;
-        border: none;
-        border-bottom: 2px solid green;
-        outline: none;
-        font-size: 1.2rem; }
-        .UserApp-container-profile-form-contact > input:focus {
-          border-bottom: 3px solid red; }
-    .UserApp-container-profile-form-submit {
-      margin: 5rem 0rem;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .UserApp-container-profile-form-submit > button {
-        background: linear-gradient(to top right, #36a7e9, #0573b3);
-        border: none;
-        padding: 1rem;
-        border-radius: 15px;
-        font-size: 2rem;
-        font-family: 'Ubuntu';
-        color: white; }
-        .UserApp-container-profile-form-submit > button:hover {
-          background: #004974; }
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .UserApp-container-profile-form-h1 > h1 {
+          font-weight: 600;
+          background: linear-gradient(to top right, #9d00f8, #37b6ff);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent; }
+          @media (max-width: 31.25em) {
+            .UserApp-container-profile-form-h1 > h1 {
+              font-size: 3rem; } }
+      .UserApp-container-profile-form-h2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .UserApp-container-profile-form-h2 > h2 {
+          font-weight: 400;
+          background: linear-gradient(to top right, #9d00f8, #37b6ff);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent; }
+          @media (max-width: 31.25em) {
+            .UserApp-container-profile-form-h2 > h2 {
+              font-size: 2rem; } }
+      .UserApp-container-profile-form-photo {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .UserApp-container-profile-form-photo-box {
+          border-radius: 100rem;
+          overflow: hidden;
+          border: 5px solid blue;
+          position: relative; }
+          @media (max-width: 62.5em) {
+            .UserApp-container-profile-form-photo-box .UserApp-container-profile-form-photo-box-edit {
+              opacity: 1; } }
+          .UserApp-container-profile-form-photo-box:hover .UserApp-container-profile-form-photo-box-edit {
+            opacity: 1; }
+          .UserApp-container-profile-form-photo-box > img {
+            width: 40rem; }
+            @media (max-width: 31.25em) {
+              .UserApp-container-profile-form-photo-box > img {
+                width: 20rem; } }
+          .UserApp-container-profile-form-photo-box-edit {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #00497485;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all .5s ease-in-out; }
+            .UserApp-container-profile-form-photo-box-edit > button {
+              width: 5rem;
+              height: 5rem;
+              font-size: 2rem;
+              margin: 1rem;
+              border: none;
+              border-radius: 50%;
+              background: #0062a8;
+              color: white; }
+      .UserApp-container-profile-form-desc {
+        width: 100%; }
+        .UserApp-container-profile-form-desc > textarea {
+          width: 100%;
+          font-size: 2rem;
+          font-family: 'Ubuntu';
+          resize: none; }
+          @media (max-width: 31.25em) {
+            .UserApp-container-profile-form-desc > textarea {
+              font-size: 1.5rem; } }
+      .UserApp-container-profile-form-contact {
+        display: flex;
+        flex-direction: column; }
+        .UserApp-container-profile-form-contact > label {
+          margin-left: 2rem;
+          margin-top: 2rem;
+          font-size: 2rem; }
+        .UserApp-container-profile-form-contact > input {
+          padding: .75rem;
+          border: none;
+          border-bottom: 2px solid green;
+          outline: none;
+          font-size: 1.2rem; }
+          .UserApp-container-profile-form-contact > input:focus {
+            border-bottom: 3px solid red; }
+      .UserApp-container-profile-form-submit {
+        margin: 5rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .UserApp-container-profile-form-submit > button {
+          background: linear-gradient(to top right, #36a7e9, #0573b3);
+          border: none;
+          padding: 1rem;
+          border-radius: 15px;
+          font-size: 2rem;
+          font-family: 'Ubuntu';
+          color: white; }
+          .UserApp-container-profile-form-submit > button:hover {
+            background: #004974; }
     .UserApp-container-announcements {
       margin-top: 2rem;
       width: 100%;

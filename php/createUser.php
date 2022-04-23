@@ -11,10 +11,14 @@ $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 $uniq = uniqid($email);
 
 try {
-    if ($user->CreateNewUser($email, $passwordHash, $uniq)) {
-        echo json_encode(['msg' => 'UserCreated']);
+    if (mkdir("../img/users/" . $uniq, 0777, true)) {
+        if ($user->CreateNewUser($email, $passwordHash, $uniq)) {
+            echo json_encode(['msg' => 'UserCreated']);
+        } else {
+            echo json_encode(['pass' => 'WrongInDb']);
+        }
     } else {
-        echo json_encode(['pass' => 'WrongInDb']);
+        echo json_encode(['pass' => 'WrongSomething']);
     }
 } catch (Exception) {
     echo json_encode(['pass' => 'WrongSomething']);

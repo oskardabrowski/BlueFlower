@@ -1,3 +1,7 @@
+<?php require "./models/database.php"; ?>
+<?php require "./models/dbconfig.php"; ?>
+<?php require "./models/Announcements.php"; ?>
+<?php require "./models/Users.php"; ?>
 <?php include "./inc/account/accountHead.php"; ?>
 <?php require "./models/session_helper.php"; ?>
 <?php
@@ -62,5 +66,6 @@ if (empty($_SESSION['id'])) {
 <script src="./js/menu.js"></script>
 <script src="./js/cart.js"></script>
 <script src="./vendors/summernote/summernote.init.js"></script>
+<script src="./js/changeUserPhoto.js"></script>
 
 </html>

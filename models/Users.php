@@ -31,4 +31,11 @@ class User
         $this->db->bind(':email', $email);
         return $this->db->resultSet();
     }
+
+    public function GetUserData($id)
+    {
+        $this->db->query('SELECT * FROM users WHERE user_id = :id');
+        $this->db->bind(':id', $id);
+        return $this->db->single();
+    }
 }

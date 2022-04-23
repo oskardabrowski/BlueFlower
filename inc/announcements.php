@@ -462,7 +462,11 @@ $announcements = $items->SelectAllAnnouncements();
                     <div class="items-container-item-rotate-back <?php echo $a->ann_type; ?>-background">
                         <div class="items-container-item-rotate-back-photo">
                             <div class="items-container-item-rotate-back-photo-container">
-                                <img src="./img/users/<?php echo $user_data->user_photo; ?>" alt="user-image" />
+                                <?php if ($user_data->user_photo !== '') : ?>
+                                    <img src="./img/users/Alex.jpg" alt="user-img" />
+                                <?php else : ?>
+                                    <img src="./img/default.jpg" alt="user-img" />
+                                <?php endif; ?>
                             </div>
                             <span class="items-container-item-rotate-back-photo-username"><?php echo $user_data->user_name; ?></span>
                         </div>
