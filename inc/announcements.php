@@ -443,7 +443,7 @@ $announcements = $items->SelectAllAnnouncements();
             }
             $user_contact = json_decode($user_data->user_contact);
             ?>
-            <a href="#" class="items-container-item">
+            <a href="./item.php?id=<?php echo $a->ann_id; ?>" class="items-container-item">
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">

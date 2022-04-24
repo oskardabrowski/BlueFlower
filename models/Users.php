@@ -75,4 +75,12 @@ class User
             return false;
         }
     }
+
+    public function UpdateUserPassword($id, $password)
+    {
+        $this->db->query('UPDATE users SET user_password = :password WHERE user_id = :id');
+        $this->db->bind(':password', $password);
+        $this->db->bind(':id', $id);
+        return $this->db->execute();
+    }
 }

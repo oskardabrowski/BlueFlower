@@ -1116,6 +1116,9 @@ nav {
           background: #004974; }
       .UserApp-container-changePassword > form > div {
         width: 100%; }
+        .UserApp-container-changePassword > form > div > span {
+          font-size: 1.5rem;
+          margin-left: 1rem; }
         .UserApp-container-changePassword > form > div > input {
           width: 100%;
           padding: .5rem;
