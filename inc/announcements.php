@@ -447,7 +447,7 @@ $announcements = $items->SelectAllAnnouncements();
                 <div class="items-container-item-rotate">
                     <div class="items-container-item-rotate-front">
                         <div class="items-container-item-rotate-front-image">
-                            <img src="./img/items/<?php echo $a->ann_img_general; ?>" alt="book" />
+                            <img src="./img/users/<?php echo $a->ann_user; ?>/<?php echo $a->ann_dir; ?>/<?php echo $a->ann_img_general; ?>" alt="book" />
                         </div>
                         <div class="items-container-item-rotate-front-title <?php echo $a->ann_type; ?>-background <?php echo $a->ann_type; ?>-path">
                             <h2><?php echo $a->ann_title; ?></h2>

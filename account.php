@@ -70,5 +70,7 @@ if (empty($_SESSION['id'])) {
 <script src="./js/removePhoto.js"></script>
 <script src="./js/updateDetails.js"></script>
 <script src="./js/changePassword.js"></script>
+<script src="./js/deleteAnnouncement.js"></script>
+<script src="./js/removeAnnPhoto.js"></script>
 
 </html>

@@ -24,6 +24,9 @@ if (!empty($_GET['code'])) {
 <?php if (!empty($code) && $code == 'succes-upload') : ?>
     <div class="msgContainer LoginMsgSuccess">Zdjęcie wgrane poprawnie</div>
 <?php endif; ?>
+<?php if (!empty($code) && $code == 'success') : ?>
+    <div class="msgContainer LoginMsgSuccess">Sukces</div>
+<?php endif; ?>
 <nav class="AccountNav">
     <svg class="AccountNav-logo">
         <use xlink:href="./img/BlueFlowerLogo.svg#FlowerLogo" />

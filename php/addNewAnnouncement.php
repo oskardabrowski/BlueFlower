@@ -39,9 +39,19 @@ if (mkdir('../img/users/' . $userData->user_uniq . '/' . $newDir)) {
                     array_push($arrayImages, $name);
                 }
                 if ($ann->AddNewAnnoucement($general_image_name, $title, $desc, $footer, $class, $userData->user_uniq, json_encode($arrayImages), $newDir, $type, false)) {
-                    header('Location: account.php?page=form&code=success');
+                    header('Location: ../account.php?page=announcements&code=success');
+                } else {
+                    header('Location: ../account.php?page=form&code=error');
                 }
+            } else {
+                header('Location: ../account.php?page=form&code=error');
             }
+        } else {
+            header('Location: ../account.php?page=form&code=error');
         }
+    } else {
+        header('Location: ../account.php?page=form&code=error');
     }
+} else {
+    header('Location: ../account.php?page=form&code=error');
 }

@@ -45,4 +45,19 @@ class Announcements
         $this->db->bind(':active', $active);
         return $this->db->execute();
     }
+
+    public function DeleteAnnouncement($id)
+    {
+        $this->db->query('DELETE FROM announcements WHERE ann_id = :id');
+        $this->db->bind(':id', $id);
+        return $this->db->execute();
+    }
+
+    public function UpdateImagesArray($id, $array)
+    {
+        $this->db->query('UPDATE announcements SET ann_images = :array WHERE ann_id = :id');
+        $this->db->bind(':id', $id);
+        $this->db->bind(':array', $array);
+        return $this->db->execute();
+    }
 }
