@@ -60,4 +60,17 @@ class Announcements
         $this->db->bind(':array', $array);
         return $this->db->execute();
     }
+
+    public function UpdateAnnouncementById($id, $imgName, $title, $desc, $footer, $type, $images)
+    {
+        $this->db->query('UPDATE announcements SET ann_img_general = :image, ann_title = :title, ann_desc = :desc, ann_footer = :footer, ann_type = :type, ann_images = :images WHERE ann_id = :id');
+        $this->db->bind(':id', $id);
+        $this->db->bind(':images', $images);
+        $this->db->bind(':type', $type);
+        $this->db->bind(':footer', $footer);
+        $this->db->bind(':desc', $desc);
+        $this->db->bind(':title', $title);
+        $this->db->bind(':image', $imgName);
+        return $this->db->execute();
+    }
 }

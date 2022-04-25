@@ -27,7 +27,7 @@ $images = json_decode($data->ann_images);
 
 
 <header class="Item-banner">
-    <img src="./img/items/<?php echo $data->ann_img_general; ?>" alt="item-image" />
+    <img src="./img/users/<?php echo $data->ann_user; ?>/<?php echo $data->ann_dir; ?>/<?php echo $data->ann_img_general; ?>" alt="item-image" />
 </header>
 <article class="Item-desc">
     <div class="Item-desc-article">
@@ -40,7 +40,7 @@ $images = json_decode($data->ann_images);
         <?php if (!empty($images)) : ?>
             <?php foreach ($images as $i) : ?>
                 <div class="Item-desc-photos-item">
-                    <img src="./img/items/<?php echo $i; ?>" alt="gallery-photo" />
+                    <img src="./img/users/<?php echo $data->ann_user; ?>/<?php echo $data->ann_dir; ?>/images/<?php echo $i; ?>" alt="gallery-photo" />
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>

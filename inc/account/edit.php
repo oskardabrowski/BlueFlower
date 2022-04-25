@@ -15,26 +15,28 @@ if (isset($id)) {
 ?>
 <div class="UserApp-container-edit">
     <h1 class="UserApp-container-edit-header header-style">Edytuj ofertę</h1>
-    <form enctype="multipart/form-data">
+    <form action="./php/changeAnnouncement.php" method="POST" enctype="multipart/form-data">
         <label>Klasa oferty: </label>
-        <select>
-            <option>Inne</oprion>
-            <option>Samochody</oprion>
-            <option>Kryptowaluty</oprion>
-            <option>Praca</oprion>
-            <option>Elektronika</oprion>
-            <option>Jedzenie</oprion>
-            <option>Odzież</oprion>
-            <option>AGD</oprion>
+        <input name="id" readonly class="d-none" value="<?php echo $id; ?>" />
+        <input name="user_id" readonly class="d-none" value="<?php echo $_SESSION['id']; ?>" />
+        <select name="class">
+            <option value="other">Inne</oprion>
+            <option value="cars">Samochody</oprion>
+            <option value="crypto">Kryptowaluty</oprion>
+            <option value="soft">Oprogramowanie</oprion>
+            <option value="electronic">Elektronika</oprion>
+            <option value="meal">Jedzenie</oprion>
+            <option value="clothes">Odzież</oprion>
+            <option value="agd">AGD</oprion>
         </select>
         <label>Edytuj nazwę oferty: </label>
-        <input type="text" placeholder="Samochód na sprzedaż" value="<?php echo $a->ann_title; ?>" />
+        <input type="text" name="title" placeholder="Samochód na sprzedaż" value="<?php echo $a->ann_title; ?>" />
         <label>Aktualne zdjęcie główne oferty: </label>
         <img src="./img/users/<?php echo $a->ann_user; ?>/<?php echo $a->ann_dir; ?>/<?php echo $a->ann_img_general; ?>" alt="general-photo">
         <label>Edytuj zdjęcie główne oferty: </label>
-        <input type="file" />
+        <input type="file" name="general_img" />
         <label>Edytuj opis oferty: </label>
-        <textarea class="summernote"><?php echo $a->ann_desc; ?></textarea>
+        <textarea name="desc" class="summernote"><?php echo $a->ann_desc; ?></textarea>
         <label>Edytuj zdjęcia oferty: </label>
         <div class="UserApp-container-edit-images">
             <?php foreach ($images as $i) : ?>
@@ -49,7 +51,7 @@ if (isset($id)) {
         <label>Dodaj zdjęcia do oferty: </label>
         <input type="file" name="NewPhotos[]" multiple />
         <label>Edytuj napis w stopce oferty (opcjonalne): </label>
-        <input type="text" placeholder="Dobry stan" value="<?php echo $a->ann_footer; ?>" />
+        <input type="text" name="footer" placeholder="Dobry stan" value="<?php echo $a->ann_footer; ?>" />
         <button>Zapisz zmiany</button>
     </form>
 </div>
