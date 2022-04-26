@@ -34,6 +34,10 @@
             </div>
 
         </div>
+        <div class="UserApp-container-profile-form-contact">
+            <label>Nazwa użytkownika:</label>
+            <input type="text" class="ProfileName" placeholder="Jan Kowalski" value="<?php echo $data->user_name; ?>" />
+        </div>
         <div class="UserApp-container-profile-form-h2">
             <h2>Dodaj krótki opis (200 znaków)</h2>
         </div>

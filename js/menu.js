@@ -38,3 +38,5 @@ if(document.querySelector('#AccountMenuButton')) {
     MenuAccountButton.addEventListener('click', () => menuAccountFunction(), false);
 }
 
+
+

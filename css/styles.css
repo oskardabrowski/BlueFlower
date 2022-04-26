@@ -1240,8 +1240,7 @@ nav {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
-          display: none; }
+          align-items: center; }
           .UserApp-container-cart-payment-free > h1 {
             background: linear-gradient(to top right, #9d00f8, #37b6ff);
             -webkit-background-clip: text;

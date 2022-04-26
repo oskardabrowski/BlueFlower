@@ -1,4 +1,5 @@
 const AddAnnouncementToCartBtn = document.querySelectorAll('.AddAnnouncementToCartBtn');
+const AnnouncementCounterCart = document.querySelector('.AnnouncementCounterCart');
 
 AddAnnouncementToCartBtn.forEach(btn => {
     btn.addEventListener('click', function(e) {
@@ -15,6 +16,11 @@ AddAnnouncementToCartBtn.forEach(btn => {
             });
             const data = await response.json();
             if(data.msg == 'SUCCESS') {
+                if(AnnouncementCounterCart) {
+                    AnnouncementCounterCart.style.display = 'flex';
+                    const num = AnnouncementCounterCart.innerText;
+                    AnnouncementCounterCart.innerText = parseInt(num) +1;
+                }
                 Nav.insertAdjacentHTML('beforebegin', '<div class="msgContainer LoginMsgSuccess">Ogłoszenie dodane do koszyka</div>');
             } else {
                 Nav.insertAdjacentHTML('beforebegin', '<div class="msgContainer LoginMsgDanger">Coś poszło nie tak!</div>');

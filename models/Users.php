@@ -47,13 +47,14 @@ class User
         return $this->db->execute();
     }
 
-    public function UpdateUserDetails($id, $email, $desc, $contact)
+    public function UpdateUserDetails($id, $email, $desc, $contact, $name)
     {
-        $this->db->query('UPDATE users SET user_email = :email, user_desc = :desc, user_contact = :contact WHERE user_id = :id');
+        $this->db->query('UPDATE users SET user_email = :email, user_desc = :desc, user_contact = :contact, user_name = :name WHERE user_id = :id');
         $this->db->bind(':id', $id);
         $this->db->bind(':email', $email);
         $this->db->bind(':desc', $desc);
         $this->db->bind(':contact', $contact);
+        $this->db->bind(':name', $name);
         return $this->db->execute();
     }
 

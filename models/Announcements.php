@@ -73,4 +73,12 @@ class Announcements
         $this->db->bind(':image', $imgName);
         return $this->db->execute();
     }
+
+    public function ActiveAnnouncementById($id, $status)
+    {
+        $this->db->query('UPDATE announcements SET ann_active = :active WHERE ann_id = :id');
+        $this->db->bind(':active', $status);
+        $this->db->bind(':id', $id);
+        return $this->db->execute();
+    }
 }

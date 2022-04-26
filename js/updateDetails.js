@@ -6,6 +6,7 @@ const ProfileShortDescription = document.querySelector(".ProfileShortDescription
 const ProfileTelephone = document.querySelector(".ProfileTelephone");
 const ProfileAddress = document.querySelector(".ProfileAddress");
 const ProfileEmail = document.querySelector(".ProfileEmail");
+const ProfileName = document.querySelector(".ProfileName");
 const ProfileUserId = document.querySelector(".ProfileUserId");
 
 ButtonSubmitProfileDetailsButton.addEventListener('click', function(e) {
@@ -15,6 +16,7 @@ ButtonSubmitProfileDetailsButton.addEventListener('click', function(e) {
     const address = ProfileAddress.value;
     const telephone = ProfileTelephone.value;
     const id = ProfileUserId.value
+    const name = ProfileName.value
     const contact = JSON.stringify({tel: telephone, address: address});
 
     const emailTest = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -25,6 +27,7 @@ ButtonSubmitProfileDetailsButton.addEventListener('click', function(e) {
     form.set('desc', desc);
     form.set('contact', contact);
     form.set('id', id);
+    form.set('name', name);
 
     async function updateDetails() {
         const response = await fetch('./php/updateDetails.php', {
