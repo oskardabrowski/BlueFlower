@@ -29,7 +29,7 @@ try {
                 <?php echo $a->ann_footer; ?>
             </div>
             <div class="UserApp-container-announcements-item-options">
-                <button><i class="fas fa-cart-plus"></i></button>
+                <button class="AddAnnouncementToCartBtn" id="<?php echo $a->ann_id; ?>"><i id="<?php echo $a->ann_id; ?>" class="fas fa-cart-plus"></i></button>
                 <a href="?page=edit&id=<?php echo $a->ann_id; ?>"><i class="fas fa-edit"></i></a>
                 <button class="DeleteAnnouncementBtn" id="<?php echo $a->ann_id; ?>">
                     <i id="<?php echo $a->ann_id; ?>" class="fas fa-trash"></i>

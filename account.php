@@ -72,5 +72,6 @@ if (empty($_SESSION['id'])) {
 <script src="./js/changePassword.js"></script>
 <script src="./js/deleteAnnouncement.js"></script>
 <script src="./js/removeAnnPhoto.js"></script>
+<script src="./js/addAnnouncementToCart.js"></script>
 
 </html>

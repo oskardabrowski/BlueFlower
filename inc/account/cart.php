@@ -1,128 +1,46 @@
+<?php
+
+$id_array = $_SESSION['cart'];
+$ann = new Announcements();
+
+?>
 <div class="UserApp-container-cart">
     <div class="UserApp-container-cart-header">
         <h1>Twój koszyk</h1>
     </div>
     <div class="UserApp-container-cart-items">
         <div class="UserApp-container-cart-items-box">
-            <div class="UserApp-container-cart-items-box-item">
-                <div class="UserApp-container-cart-items-box-item-desc">
-                    <div class="UserApp-container-cart-items-box-item-desc-image">
-                        <img src="./img/items/car.jpg" alt="image" />
+            <?php foreach ($id_array as $id) : ?>
+                <?php $data = $ann->SelectAnnouncementById($id); ?>
+                <div class="UserApp-container-cart-items-box-item">
+                    <div class="UserApp-container-cart-items-box-item-desc">
+                        <div class="UserApp-container-cart-items-box-item-desc-image">
+                            <img src="./img/users/<?php echo $data->ann_user; ?>/<?php echo $data->ann_dir; ?>/<?php echo $data->ann_img_general; ?>" alt="image" />
+                        </div>
+                        <div class="UserApp-container-cart-items-box-item-desc-name">
+                            <h1><?php echo $data->ann_title; ?></h1>
+                            <button>Usuń</button>
+                        </div>
                     </div>
-                    <div class="UserApp-container-cart-items-box-item-desc-name">
-                        <h1>Nowy samochód</h1>
-                        <button>Usuń</button>
+                    <div class="UserApp-container-cart-items-box-item-months">
+                        <input type="text" class="d-none" value="<?php echo $id; ?>" />
+                        <?php if ($data->ann_payment !== 'free') : ?>
+                            <input type="number" value="1" min="1" /> miesięcy
+                        <?php else : ?>
+                            <input type="number" value="2" readonly /> tygodnie
+                        <?php endif; ?>
                     </div>
-                </div>
-                <div class="UserApp-container-cart-items-box-item-months">
-                    <input type="number" value="1" min="1" /> miesięcy
-                </div>
-                <div class="UserApp-container-cart-items-box-item-total">
-                    <h2>Koszt: </h2><span>50 gr</span>
-                </div>
-            </div>
-            <div class="UserApp-container-cart-items-box-item">
-                <div class="UserApp-container-cart-items-box-item-desc">
-                    <div class="UserApp-container-cart-items-box-item-desc-image">
-                        <img src="./img/items/car.jpg" alt="image" />
-                    </div>
-                    <div class="UserApp-container-cart-items-box-item-desc-name">
-                        <h1>Nowy samochód</h1>
-                        <button>Usuń</button>
-                    </div>
-                </div>
-                <div class="UserApp-container-cart-items-box-item-months">
-                    <input type="number" value="1" min="1" /> miesięcy
-                </div>
-                <div class="UserApp-container-cart-items-box-item-total">
-                    <h2>Koszt: </h2><span>50 gr</span>
-                </div>
-            </div>
-            <div class="UserApp-container-cart-items-box-item">
-                <div class="UserApp-container-cart-items-box-item-desc">
-                    <div class="UserApp-container-cart-items-box-item-desc-image">
-                        <img src="./img/items/car.jpg" alt="image" />
-                    </div>
-                    <div class="UserApp-container-cart-items-box-item-desc-name">
-                        <h1>Nowy samochód</h1>
-                        <button>Usuń</button>
+                    <div class="UserApp-container-cart-items-box-item-total">
+                        <h2>Koszt: </h2><span><?php
+                                                if ($data->ann_payment !== 'free') {
+                                                    echo '0,50 zł';
+                                                } else {
+                                                    echo '0 zł';
+                                                }
+                                                ?></span>
                     </div>
                 </div>
-                <div class="UserApp-container-cart-items-box-item-months">
-                    <input type="number" value="1" min="1" /> miesięcy
-                </div>
-                <div class="UserApp-container-cart-items-box-item-total">
-                    <h2>Koszt: </h2><span>50 gr</span>
-                </div>
-            </div>
-            <div class="UserApp-container-cart-items-box-item">
-                <div class="UserApp-container-cart-items-box-item-desc">
-                    <div class="UserApp-container-cart-items-box-item-desc-image">
-                        <img src="./img/items/car.jpg" alt="image" />
-                    </div>
-                    <div class="UserApp-container-cart-items-box-item-desc-name">
-                        <h1>Nowy samochód</h1>
-                        <button>Usuń</button>
-                    </div>
-                </div>
-                <div class="UserApp-container-cart-items-box-item-months">
-                    <input type="number" value="1" min="1" /> miesięcy
-                </div>
-                <div class="UserApp-container-cart-items-box-item-total">
-                    <h2>Koszt: </h2><span>50 gr</span>
-                </div>
-            </div>
-            <div class="UserApp-container-cart-items-box-item">
-                <div class="UserApp-container-cart-items-box-item-desc">
-                    <div class="UserApp-container-cart-items-box-item-desc-image">
-                        <img src="./img/items/car.jpg" alt="image" />
-                    </div>
-                    <div class="UserApp-container-cart-items-box-item-desc-name">
-                        <h1>Nowy samochód</h1>
-                        <button>Usuń</button>
-                    </div>
-                </div>
-                <div class="UserApp-container-cart-items-box-item-months">
-                    <input type="number" value="1" min="1" /> miesięcy
-                </div>
-                <div class="UserApp-container-cart-items-box-item-total">
-                    <h2>Koszt: </h2><span>50 gr</span>
-                </div>
-            </div>
-            <div class="UserApp-container-cart-items-box-item">
-                <div class="UserApp-container-cart-items-box-item-desc">
-                    <div class="UserApp-container-cart-items-box-item-desc-image">
-                        <img src="./img/items/car.jpg" alt="image" />
-                    </div>
-                    <div class="UserApp-container-cart-items-box-item-desc-name">
-                        <h1>Nowy samochód</h1>
-                        <button>Usuń</button>
-                    </div>
-                </div>
-                <div class="UserApp-container-cart-items-box-item-months">
-                    <input type="number" value="1" min="1" /> miesięcy
-                </div>
-                <div class="UserApp-container-cart-items-box-item-total">
-                    <h2>Koszt: </h2><span>50 gr</span>
-                </div>
-            </div>
-            <div class="UserApp-container-cart-items-box-item">
-                <div class="UserApp-container-cart-items-box-item-desc">
-                    <div class="UserApp-container-cart-items-box-item-desc-image">
-                        <img src="./img/items/car.jpg" alt="image" />
-                    </div>
-                    <div class="UserApp-container-cart-items-box-item-desc-name">
-                        <h1>Nowy samochód</h1>
-                        <button>Usuń</button>
-                    </div>
-                </div>
-                <div class="UserApp-container-cart-items-box-item-months">
-                    <input type="number" value="1" min="1" /> miesięcy
-                </div>
-                <div class="UserApp-container-cart-items-box-item-total">
-                    <h2>Koszt: </h2><span>50 gr</span>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
         <div class="UserApp-container-cart-items-btn">
             <button class="UserApp-container-cart-items-btn-button">Następny krok<i class="fas fa-arrow-alt-circle-right"></i></button>

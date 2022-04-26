@@ -1156,58 +1156,47 @@ nav {
             align-items: center;
             border-top: 1px solid black;
             border-bottom: 1px solid black; }
+            @media (max-width: 37.5em) {
+              .UserApp-container-cart-items-box-item {
+                flex-direction: column; } }
             .UserApp-container-cart-items-box-item-total {
               display: flex;
               align-items: center;
-              justify-content: center; }
+              justify-content: center;
+              min-width: 30%; }
               .UserApp-container-cart-items-box-item-total > span {
                 margin: 0rem 2rem;
                 font-size: 2rem; }
-                @media (max-width: 43.75em) {
-                  .UserApp-container-cart-items-box-item-total > span {
-                    font-size: 1rem; } }
               .UserApp-container-cart-items-box-item-total > h2 {
                 font-size: 2rem; }
-                @media (max-width: 43.75em) {
-                  .UserApp-container-cart-items-box-item-total > h2 {
-                    font-size: 1rem; } }
             .UserApp-container-cart-items-box-item-months {
               font-size: 2rem; }
-              @media (max-width: 43.75em) {
-                .UserApp-container-cart-items-box-item-months {
-                  font-size: 1rem; } }
               .UserApp-container-cart-items-box-item-months > input {
                 border: none;
                 outline: none;
                 width: 7.5rem;
                 border-bottom: 2px solid green; }
-                @media (max-width: 43.75em) {
-                  .UserApp-container-cart-items-box-item-months > input {
-                    width: 5rem; } }
                 .UserApp-container-cart-items-box-item-months > input:focus {
                   border-bottom: 3px solid red; }
             .UserApp-container-cart-items-box-item-desc {
               width: auto;
-              display: flex; }
+              display: flex;
+              min-width: 30%;
+              max-width: 30%; }
+              @media (max-width: 37.5em) {
+                .UserApp-container-cart-items-box-item-desc {
+                  min-width: 100%;
+                  max-width: 100%; } }
               .UserApp-container-cart-items-box-item-desc-name {
                 margin-left: 2rem; }
                 .UserApp-container-cart-items-box-item-desc-name > h1 {
                   font-size: 3rem; }
-                  @media (max-width: 43.75em) {
-                    .UserApp-container-cart-items-box-item-desc-name > h1 {
-                      font-size: 2rem; } }
-                  @media (max-width: 31.25em) {
-                    .UserApp-container-cart-items-box-item-desc-name > h1 {
-                      font-size: 1rem; } }
                 .UserApp-container-cart-items-box-item-desc-name > button {
                   border: none;
                   background: none;
                   text-decoration: underline;
                   color: red;
                   font-size: 1.5rem; }
-                  @media (max-width: 43.75em) {
-                    .UserApp-container-cart-items-box-item-desc-name > button {
-                      font-size: 1rem; } }
                   .UserApp-container-cart-items-box-item-desc-name > button:hover {
                     cursor: pointer; }
               .UserApp-container-cart-items-box-item-desc-image {

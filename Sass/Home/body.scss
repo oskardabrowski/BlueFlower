@@ -1203,40 +1203,32 @@
             align-items: center;
             border-top: 1px solid black;
             border-bottom: 1px solid black;
+            @include mediaQuery(phone600) {
+              flex-direction: column;
+            }
 
             &-total {
               display: flex;
               align-items: center;
               justify-content: center;
+              min-width: 30%;
               & > span {
                 margin: 0rem 2rem;
                 font-size: 2rem;
-                @include mediaQuery(phone700) {
-                  font-size: 1rem;
-                }
               }
 
               & > h2 {
                 font-size: 2rem;
-                @include mediaQuery(phone700) {
-                  font-size: 1rem;
-                }
               }
             }
             &-months {
               font-size: 2rem;
-              @include mediaQuery(phone700) {
-                font-size: 1rem;
-              }
 
               &>input {
                 border: none;
                 outline: none;
                 width: 7.5rem;
                 border-bottom: 2px solid green;
-                @include mediaQuery(phone700) {
-                  width: 5rem;
-                }
 
                 &:focus {
                   border-bottom: 3px solid red;
@@ -1246,17 +1238,17 @@
             &-desc {
               width: auto;
               display: flex;
+              min-width: 30%;
+              max-width: 30%;
+              @include mediaQuery(phone600) {
+                min-width: 100%;
+                max-width: 100%;
+              }
 
               &-name {
                 margin-left: 2rem;
                 & > h1 {
                   font-size: 3rem;
-                  @include mediaQuery(phone700) {
-                    font-size: 2rem;
-                  }
-                  @include mediaQuery(phone500) {
-                    font-size: 1rem;
-                  }
                 }
 
                 & > button {
@@ -1265,10 +1257,6 @@
                   text-decoration: underline;
                   color: red;
                   font-size: 1.5rem;
-
-                  @include mediaQuery(phone700) {
-                    font-size: 1rem;
-                  }
 
                   &:hover {
                     cursor: pointer;
