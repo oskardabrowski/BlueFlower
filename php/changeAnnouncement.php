@@ -64,5 +64,9 @@ if ($_FILES['NewPhotos']['tmp_name']) {
 if ($generalImgUpload && $imagesAllUpload) {
     if ($ann->UpdateAnnouncementById($id, $generalImgName, $title, $desc, $footer, $class, json_encode($imagesArray))) {
         header('Location: ../account.php?page=announcements&code=success');
+    } else {
+        header('Location: ../account.php?page=announcements&code=error');
     }
+} else {
+    header('Location: ../account.php?page=announcements&code=error');
 }

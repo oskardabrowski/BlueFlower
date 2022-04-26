@@ -16,6 +16,7 @@ try {
         if (password_verify($password, $db_password)) {
             $_SESSION["id"] = $userData[0]->user_id;
             $_SESSION["email"] = $userData[0]->user_email;
+            $_SESSION["cart"] = array();
             echo json_encode(["msg" => "SESSION_STARTED"]);
         } else {
             echo json_encode(["msg" => "WRONG_PASSWORD"]);

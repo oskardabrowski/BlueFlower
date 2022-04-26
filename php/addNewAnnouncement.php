@@ -36,7 +36,9 @@ if (mkdir('../img/users/' . $userData->user_uniq . '/' . $newDir)) {
 
                     $path = '../img/users/' . $userData->user_uniq . '/' . $newDir . '/images/' . $name;
                     $user->uploadImage($name, $tmp, $size, $path);
-                    array_push($arrayImages, $name);
+                    if ($name != null) {
+                        array_push($arrayImages, $name);
+                    }
                 }
                 if ($ann->AddNewAnnoucement($general_image_name, $title, $desc, $footer, $class, $userData->user_uniq, json_encode($arrayImages), $newDir, $type, false)) {
                     header('Location: ../account.php?page=announcements&code=success');
