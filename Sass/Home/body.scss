@@ -2066,6 +2066,128 @@
   justify-content: center;
 
 
+  &-comments {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-section {
+      width: 50%;
+      &-comment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-level1 {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          & > div {
+            display: flex;
+          }
+          &-desc{
+            width: max-content;
+
+            & > span {
+              color: blue;
+
+              &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+              }
+            }
+          }
+          &-img {
+            width: 5rem;
+            height: 5rem;
+            min-width: 5rem;
+            margin-right: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid blue;
+            overflow: hidden;
+        
+            &>img {
+              width: 100%;
+            }
+          }
+        }
+        &-level2 {
+          display: flex;
+          width: 90%;
+          align-self: flex-end;
+          margin-top: .5rem;
+          justify-content: space-between;
+          & > div {
+            display: flex;
+          }
+          &-desc{
+            width: max-content;
+
+            & > span {
+              color: blue;
+
+              &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+              }
+            }
+          }
+          &-img {
+            width: 5rem;
+            height: 5rem;
+            min-width: 5rem;
+            margin-right: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid blue;
+            overflow: hidden;
+        
+            &>img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-form {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      & > form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        & > textarea {
+          resize: none;
+          border-radius: 5px;
+        }
+        & > button {
+          padding: 1rem;
+          font-size: 2rem;
+          background: none;
+          border: none;
+          color: #36a7e9;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
 
   &-article {
   width: 100%;

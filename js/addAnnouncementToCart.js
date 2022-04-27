@@ -22,6 +22,8 @@ AddAnnouncementToCartBtn.forEach(btn => {
                     AnnouncementCounterCart.innerText = parseInt(num) +1;
                 }
                 Nav.insertAdjacentHTML('beforebegin', '<div class="msgContainer LoginMsgSuccess">Ogłoszenie dodane do koszyka</div>');
+            } else if (data.msg = 'EXISTS') {
+                Nav.insertAdjacentHTML('beforebegin', '<div class="msgContainer LoginMsgSuccess">Ogłoszenie dodane do koszyka</div>');
             } else {
                 Nav.insertAdjacentHTML('beforebegin', '<div class="msgContainer LoginMsgDanger">Coś poszło nie tak!</div>');
             }

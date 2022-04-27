@@ -5,6 +5,7 @@
 <?php require "./models/dbconfig.php"; ?>
 <?php require "./models/Announcements.php"; ?>
 <?php require "./models/Users.php"; ?>
+<?php require "./models/session_helper.php"; ?>
 <?php
 
 if ($_GET['id']) {
@@ -22,6 +23,9 @@ $userData = $u[0];
 $user_contact = json_decode($userData->user_contact);
 $images = json_decode($data->ann_images);
 
+$currentUserId = $_SESSION['id'];
+
+$comments = json_decode($data->ann_comments);
 ?>
 
 
@@ -57,30 +61,65 @@ $images = json_decode($data->ann_images);
             </ul>
         </div>
     </div>
-</article>
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-container-media">
-            <div>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><a href="#"><i class="fas fa-user-secret"></i>Polityka prywatności</a></li>
-                    <li><i class="fas fa-phone"></i>Tel: 666 666 666</li>
-                    <li><i class="fas fa-envelope"></i>Mail: office@blueflower.pl</li>
-                </ul>
-            </div>
+    <div class="Item-desc-comments">
+        <h2 class="header-style Item-desc-comments-header">Sekcja komentarzy</h2>
+        <div class="Item-desc-comments-section">
+            <?php if (!empty($comments)) : ?>
+                <?php foreach ($comments as $c) : ?>
+                    <?php $commentingUser = $user->GetUserData($c->userId); ?>
+                    <?php $subcomments = $c->subcomments; ?>
+                    <div class="Item-desc-comments-section-comment">
+                        <div class="Item-desc-comments-section-comment-level1">
+                            <div>
+                                <div class="Item-desc-comments-section-comment-level1-img">
+                                    <img src="./img/users/<?php echo $commentingUser->user_uniq; ?>/<?php echo $commentingUser->user_photo; ?>" />
+                                </div>
+                                <div class="Item-desc-comments-section-comment-level1-desc">
+                                    <h3 class="UserCommentName"><?php echo $commentingUser->user_name; ?></h3>
+                                    <p><?php echo $c->desc; ?></p>
+                                    <span id="<?php echo $c->commentId ?>" class="RepeatToButton">Repeat</span>
+                                </div>
+                            </div>
+                            <?php if ($currentUserId == $userData->user_id) : ?>
+                                <div class="Item-desc-comments-section-comment-level1-block DeleteParentComment"><i class="fas fa-trash"></i></div>
+                            <?php endif; ?>
+                        </div>
+                        <?php foreach ($subcomments as $s) : ?>
+                            <?php $subCommentingUser = $user->GetUserData($s->userId); ?>
+                            <div class="Item-desc-comments-section-comment-level2">
+                                <div>
+                                    <div class="Item-desc-comments-section-comment-level2-img">
+                                        <img src="./img/users/<?php echo $subCommentingUser->user_uniq; ?>/<?php echo $subCommentingUser->user_photo; ?>" />
+                                    </div>
+                                    <div class="Item-desc-comments-section-comment-level2-desc">
+                                        <h3><?php echo $subCommentingUser->user_name; ?></h3>
+                                        <p><?php echo $s->desc; ?></p>
+                                        <span>Repeat</span>
+                                    </div>
+                                </div>
+                                <?php if ($currentUserId == $userData->user_id) : ?>
+                                    <div class="Item-desc-comments-section-comment-level1-block DeleteSubComment"><i class="fas fa-trash"></i></div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
-        <div class="footer-container-copy">
-            <div>Copyright &copy; BlueFlower <span>2022</span></div>
-            <div>Created with Font Awesome</div>
+        <div class="Item-desc-comments-form">
+            <h2>Dodaj nowy komentarz</h2>
+            <h5 class="d-none RepeatSomeoneHeader">Odpowiedz: Alex</h5>
+            <form class="AddCommentInputForm">
+                <span class="d-none RepeatTo"></span>
+                <input type="text" readonly class="d-none UserId" value="<?php echo $currentUserId; ?>" />
+                <input type="text" readonly class="d-none AnnId" value="<?php echo $ann_id; ?>" />
+                <textarea class="CommentMessage" rows="5" cols="75"></textarea>
+                <button class="CommentSend"><i class="fas fa-paper-plane"></i></button>
+            </form>
         </div>
     </div>
-</footer>
+</article>
+<?php include "./inc/footer.php"; ?>
 </body>
 <?php include "./inc/scripts.php"; ?>
+<script src="./js/addComment.js"></script>

@@ -20,8 +20,12 @@
                 <div class="menu-container-btns-btn-link"><a href="./index.php">Strona główna</a></div>
                 <div class="menu-container-btns-btn-link"><a href="./about.php">O nas</a></div>
                 <div class="menu-container-btns-btn-link"><a href="./blog.php">Blog</a></div>
-                <div class="menu-container-btns-btn-link"><a href="./login.php">Logowanie</a></div>
-                <div class="menu-container-btns-btn-link"><a href="./account.php">Konto</a></div>
+                <?php if (!isset($_SESSION['id'])) : ?>
+                    <div class="menu-container-btns-btn-link"><a href="./login.php">Logowanie</a></div>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['id'])) : ?>
+                    <div class="menu-container-btns-btn-link"><a href="./account.php">Konto</a></div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

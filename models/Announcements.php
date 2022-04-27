@@ -14,6 +14,24 @@ class Announcements
         $this->db->query('SELECT * FROM announcements');
         return $this->db->resultSet();
     }
+    public function SelectAllPremiumAnnouncements()
+    {
+        $this->db->query('SELECT * FROM announcements WHERE ann_payment = :payment');
+        $this->db->bind(':payment', 'premium');
+        return $this->db->resultSet();
+    }
+    public function SelectAllStandardAnnouncements()
+    {
+        $this->db->query('SELECT * FROM announcements WHERE ann_payment = :payment');
+        $this->db->bind(':payment', 'standard');
+        return $this->db->resultSet();
+    }
+    public function SelectAllFreeAnnouncements()
+    {
+        $this->db->query('SELECT * FROM announcements WHERE ann_payment = :payment');
+        $this->db->bind(':payment', 'free');
+        return $this->db->resultSet();
+    }
 
     public function SelectAnnouncementById($id)
     {
@@ -79,6 +97,14 @@ class Announcements
         $this->db->query('UPDATE announcements SET ann_active = :active WHERE ann_id = :id');
         $this->db->bind(':active', $status);
         $this->db->bind(':id', $id);
+        return $this->db->execute();
+    }
+
+    public function UpdateCommentOfAnnouncement($id, $json)
+    {
+        $this->db->query('UPDATE announcements SET ann_comments = :comments WHERE ann_id = :id');
+        $this->db->bind(':id', $id);
+        $this->db->bind(':comments', $json);
         return $this->db->execute();
     }
 }

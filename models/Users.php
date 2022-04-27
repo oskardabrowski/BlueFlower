@@ -20,7 +20,7 @@ class User
 
     public function SelectUserByUniq($id)
     {
-        $this->db->query('SELECT user_photo, user_desc, user_contact, user_email, user_name FROM users WHERE user_uniq = :id');
+        $this->db->query('SELECT user_id, user_photo, user_desc, user_contact, user_email, user_name FROM users WHERE user_uniq = :id');
         $this->db->bind(':id', $id);
         return $this->db->resultSet();
     }

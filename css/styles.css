@@ -1819,6 +1819,95 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  .Item-desc-comments {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .Item-desc-comments-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .Item-desc-comments-section {
+      width: 50%; }
+      .Item-desc-comments-section-comment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .Item-desc-comments-section-comment-level1 {
+          display: flex;
+          width: 100%;
+          justify-content: space-between; }
+          .Item-desc-comments-section-comment-level1 > div {
+            display: flex; }
+          .Item-desc-comments-section-comment-level1-desc {
+            width: max-content; }
+            .Item-desc-comments-section-comment-level1-desc > span {
+              color: blue; }
+              .Item-desc-comments-section-comment-level1-desc > span:hover {
+                cursor: pointer;
+                text-decoration: underline; }
+          .Item-desc-comments-section-comment-level1-img {
+            width: 5rem;
+            height: 5rem;
+            min-width: 5rem;
+            margin-right: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid blue;
+            overflow: hidden; }
+            .Item-desc-comments-section-comment-level1-img > img {
+              width: 100%; }
+        .Item-desc-comments-section-comment-level2 {
+          display: flex;
+          width: 90%;
+          align-self: flex-end;
+          margin-top: .5rem;
+          justify-content: space-between; }
+          .Item-desc-comments-section-comment-level2 > div {
+            display: flex; }
+          .Item-desc-comments-section-comment-level2-desc {
+            width: max-content; }
+            .Item-desc-comments-section-comment-level2-desc > span {
+              color: blue; }
+              .Item-desc-comments-section-comment-level2-desc > span:hover {
+                cursor: pointer;
+                text-decoration: underline; }
+          .Item-desc-comments-section-comment-level2-img {
+            width: 5rem;
+            height: 5rem;
+            min-width: 5rem;
+            margin-right: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid blue;
+            overflow: hidden; }
+            .Item-desc-comments-section-comment-level2-img > img {
+              width: 100%; }
+    .Item-desc-comments-form {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .Item-desc-comments-form > form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; }
+        .Item-desc-comments-form > form > textarea {
+          resize: none;
+          border-radius: 5px; }
+        .Item-desc-comments-form > form > button {
+          padding: 1rem;
+          font-size: 2rem;
+          background: none;
+          border: none;
+          color: #36a7e9; }
+          .Item-desc-comments-form > form > button:hover {
+            cursor: pointer; }
   .Item-desc-article {
     width: 100%;
     display: flex;

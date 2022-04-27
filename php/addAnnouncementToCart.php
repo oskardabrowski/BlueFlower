@@ -15,7 +15,7 @@ if (isset($_SESSION['cart'])) {
             echo json_encode(['msg' => 'ERROR']);
         }
     } else {
-        echo json_encode(['msg' => 'SUCCESS']);
+        echo json_encode(['msg' => 'EXISTS']);
     }
 } else {
     echo json_encode(['msg' => 'ERROR']);
