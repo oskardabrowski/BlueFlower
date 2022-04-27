@@ -1860,12 +1860,16 @@ nav {
             overflow: hidden; }
             .Item-desc-comments-section-comment-level1-img > img {
               width: 100%; }
+          .Item-desc-comments-section-comment-level1-block:hover {
+            cursor: pointer; }
         .Item-desc-comments-section-comment-level2 {
           display: flex;
           width: 90%;
           align-self: flex-end;
           margin-top: .5rem;
           justify-content: space-between; }
+          .Item-desc-comments-section-comment-level2-block:hover {
+            cursor: pointer; }
           .Item-desc-comments-section-comment-level2 > div {
             display: flex; }
           .Item-desc-comments-section-comment-level2-desc {

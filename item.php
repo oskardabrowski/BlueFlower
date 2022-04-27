@@ -51,7 +51,13 @@ $comments = json_decode($data->ann_comments);
     </div>
     <div class="Item-desc-person">
         <h1 class="header-style">Ogłoszenie wystawione przez</h1>
-        <div class="Item-desc-person-img"><img src="./img/users/<?php echo $data->ann_user; ?>/<?php echo $userData->user_photo; ?>" alt="user-img" /></div>
+        <div class="Item-desc-person-img">
+            <?php if ($userData->user_photo) : ?>
+                <img src="./img/users/<?php echo $data->ann_user; ?>/<?php echo $userData->user_photo; ?>" alt="user-img" />
+            <?php elseif ($userData->user_photo != '') : ?>
+                <img src="./img/users/default.jpg" alt="user-img" />
+            <?php endif; ?>
+        </div>
         <h2 class="Item-desc-person-name"><?php echo $userData->user_name; ?></h2>
         <div class="Item-desc-person-contact">
             <ul>
@@ -68,11 +74,16 @@ $comments = json_decode($data->ann_comments);
                 <?php foreach ($comments as $c) : ?>
                     <?php $commentingUser = $user->GetUserData($c->userId); ?>
                     <?php $subcomments = $c->subcomments; ?>
+                    <?php $photo = $commentingUser->user_photo; ?>
                     <div class="Item-desc-comments-section-comment">
                         <div class="Item-desc-comments-section-comment-level1">
                             <div>
                                 <div class="Item-desc-comments-section-comment-level1-img">
-                                    <img src="./img/users/<?php echo $commentingUser->user_uniq; ?>/<?php echo $commentingUser->user_photo; ?>" />
+                                    <?php if (strlen($commentingUser->user_photo) > 0) : ?>
+                                        <img src="./img/users/<?php echo $commentingUser->user_uniq; ?>/<?php echo $commentingUser->user_photo; ?>" />
+                                    <?php else :  ?>
+                                        <img src="./img/users/default.jpg" />
+                                    <?php endif; ?>
                                 </div>
                                 <div class="Item-desc-comments-section-comment-level1-desc">
                                     <h3 class="UserCommentName"><?php echo $commentingUser->user_name; ?></h3>
@@ -81,7 +92,7 @@ $comments = json_decode($data->ann_comments);
                                 </div>
                             </div>
                             <?php if ($currentUserId == $userData->user_id) : ?>
-                                <div class="Item-desc-comments-section-comment-level1-block DeleteParentComment"><i class="fas fa-trash"></i></div>
+                                <div id="<?php echo $c->commentId; ?>" annid="<?php echo $ann_id; ?>" class="Item-desc-comments-section-comment-level1-block DeleteParentComment"><i id="<?php echo $c->commentId ?>" annid="<?php echo $ann_id; ?>" class="fas fa-trash"></i></div>
                             <?php endif; ?>
                         </div>
                         <?php foreach ($subcomments as $s) : ?>
@@ -89,16 +100,20 @@ $comments = json_decode($data->ann_comments);
                             <div class="Item-desc-comments-section-comment-level2">
                                 <div>
                                     <div class="Item-desc-comments-section-comment-level2-img">
-                                        <img src="./img/users/<?php echo $subCommentingUser->user_uniq; ?>/<?php echo $subCommentingUser->user_photo; ?>" />
+                                        <?php if (strlen($subCommentingUser->user_photo) > 0) : ?>
+                                            <img src="./img/users/<?php echo $subCommentingUser->user_uniq; ?>/<?php echo $subCommentingUser->user_photo; ?>" />
+                                        <?php else :  ?>
+                                            <img src="./img/users/default.jpg" />
+                                        <?php endif; ?>
                                     </div>
                                     <div class="Item-desc-comments-section-comment-level2-desc">
                                         <h3><?php echo $subCommentingUser->user_name; ?></h3>
                                         <p><?php echo $s->desc; ?></p>
-                                        <span>Repeat</span>
+                                        <span id="<?php echo $s->commentParentId; ?>" class="RepeatToButton">Repeat</span>
                                     </div>
                                 </div>
                                 <?php if ($currentUserId == $userData->user_id) : ?>
-                                    <div class="Item-desc-comments-section-comment-level1-block DeleteSubComment"><i class="fas fa-trash"></i></div>
+                                    <div id="<?php echo $s->subcommentId; ?>" annid="<?php echo $ann_id; ?>" parent="<?php echo $s->commentParentId; ?>" class="Item-desc-comments-section-comment-level1-block DeleteSubComment"><i id="<?php echo $s->subcommentId; ?>" annid="<?php echo $ann_id; ?>" parent="<?php echo $s->commentParentId; ?>" class="fas fa-trash"></i></div>
                                 <?php endif; ?>
                             </div>
                         <?php endforeach; ?>
@@ -111,6 +126,7 @@ $comments = json_decode($data->ann_comments);
             <h5 class="d-none RepeatSomeoneHeader">Odpowiedz: Alex</h5>
             <form class="AddCommentInputForm">
                 <span class="d-none RepeatTo"></span>
+                <input type="text" readonly class="d-none AnnUserId" value="<?php echo $userData->user_id; ?>" />
                 <input type="text" readonly class="d-none UserId" value="<?php echo $currentUserId; ?>" />
                 <input type="text" readonly class="d-none AnnId" value="<?php echo $ann_id; ?>" />
                 <textarea class="CommentMessage" rows="5" cols="75"></textarea>
@@ -123,3 +139,5 @@ $comments = json_decode($data->ann_comments);
 </body>
 <?php include "./inc/scripts.php"; ?>
 <script src="./js/addComment.js"></script>
+<script src="./js/removeComment.js"></script>
+<script src="./js/addNotify.js"></script>

@@ -2119,6 +2119,11 @@
               width: 100%;
             }
           }
+          &-block {
+            &:hover {
+              cursor: pointer;
+            }
+          }
         }
         &-level2 {
           display: flex;
@@ -2126,6 +2131,11 @@
           align-self: flex-end;
           margin-top: .5rem;
           justify-content: space-between;
+          &-block {
+            &:hover {
+              cursor: pointer;
+            }
+          }
           & > div {
             display: flex;
           }

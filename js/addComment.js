@@ -7,6 +7,7 @@ const AnnId = document.querySelector('.AnnId');
 const UserId = document.querySelector('.UserId');
 const Nav = document.querySelector('nav');
 const RepeatSomeoneHeader = document.querySelector('.RepeatSomeoneHeader');
+const AnnUserId = document.querySelector('.AnnUserId');
 
 CommentSend.addEventListener('click', async function(e) {
     e.preventDefault();
@@ -31,12 +32,29 @@ CommentSend.addEventListener('click', async function(e) {
         comments = [];
     }
 
+    const getNotifications = async (id) => {
+        const form = new FormData();
+        form.set('id', id);
+        const response = await fetch("./php/getNotify.php", {
+            method: 'POST',
+            body: form
+        });
+        const jsondata = await response.json();
+        return jsondata.msg;
+    }
+    let notificationdata = await getNotifications(AnnUserId.value);
+    let notifications;
+
+    if(notificationdata != '') {
+        notifications = await JSON.parse(notificationdata);
+    } else {
+        notifications = [];
+    }
+
     async function UpdateComments(id, json) {
         const jsonform = new FormData();
         jsonform.set('id', id);
         jsonform.set('json', json);
-        console.log(id);
-        console.log(json);
         const response = await fetch('./php/addNewComment.php', {
             method: "POST",
             body: jsonform
@@ -45,6 +63,15 @@ CommentSend.addEventListener('click', async function(e) {
         if(resp.msg == 'SUCCESS') {
             window.location.href = `item.php?id=${AnnId.value}`;
         }
+    }
+    async function UpdateNotifiaction(id, json) {
+        const jsonform = new FormData();
+        jsonform.set('id', id);
+        jsonform.set('json', json);
+        const response = await fetch('./php/updateCommentNotify.php', {
+            method: "POST",
+            body: jsonform
+        });
     }
 
     if(RepeatTo.innerText == 0) {
@@ -63,13 +90,31 @@ CommentSend.addEventListener('click', async function(e) {
             subcomments: []
         }
         comments.push(newComment);
+        if(notifications.length > 0) {
+            const select = notifications.filter(el => el.annid == AnnId.value);
+            console.log(notifications.length);
+            if(select != '') {
+                notifications.map(el => {if(el.annid == AnnId.value) {
+                    el.count += 1;
+                }})
+            } else {
+                notifications.push({annid: AnnId.value, count: 1});
+            }
+        } else {
+            notifications.push({annid: AnnId.value, count: 1});
+        }
+        UpdateNotifiaction(AnnUserId.value, JSON.stringify(notifications));
         UpdateComments(AnnId.value, JSON.stringify(comments));
     } else {
         const repeatId = RepeatTo.innerText;
-        let subcommentId
+        let subcommentId;
 
-        if(comments.subcomments) {
-            subcommentId = comment.subcomments.length + 1;
+        if(comments) {
+            comments.map((comment) => {
+                if(comment.commentId == repeatId) {
+                    subcommentId = comment.subcomments.length + 1;
+                }
+            })
         } else {
             subcommentId = 1;
         }
@@ -85,6 +130,20 @@ CommentSend.addEventListener('click', async function(e) {
                 comment.subcomments.push(newComment);
             }
         })
+        if(notifications.length > 0) {
+            const select = notifications.filter(el => el.annid == AnnId.value);
+            console.log(notifications.length);
+            if(select != '') {
+                notifications.map(el => {if(el.annid == AnnId.value) {
+                    el.count += 1;
+                }})
+            } else {
+                notifications.push({annid: AnnId.value, count: 1});
+            }
+        } else {
+            notifications.push({annid: AnnId.value, count: 1});
+        }
+        UpdateNotifiaction(AnnUserId.value, JSON.stringify(notifications));
         UpdateComments(AnnId.value, JSON.stringify(comments));
     }
 })

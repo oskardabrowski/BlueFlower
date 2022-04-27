@@ -84,4 +84,18 @@ class User
         $this->db->bind(':id', $id);
         return $this->db->execute();
     }
+
+    public function UpdateUserComments($id, $json)
+    {
+        $this->db->query('UPDATE users SET user_comments = :comments WHERE user_id = :id');
+        $this->db->bind(':comments', $json);
+        $this->db->bind(':id', $id);
+        return $this->db->execute();
+    }
+    public function GetUserNotofications($id)
+    {
+        $this->db->query('SELECT user_comments FROM users WHERE user_id = :id');
+        $this->db->bind(':id', $id);
+        return $this->db->single();
+    }
 }
