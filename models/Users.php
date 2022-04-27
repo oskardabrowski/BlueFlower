@@ -98,4 +98,12 @@ class User
         $this->db->bind(':id', $id);
         return $this->db->single();
     }
+
+    public function ClearNotifications($id, $json)
+    {
+        $this->db->query('UPDATE users SET user_comments = :comments WHERE user_id = :id');
+        $this->db->bind(':comments', $json);
+        $this->db->bind(':id', $id);
+        return $this->db->execute();
+    }
 }

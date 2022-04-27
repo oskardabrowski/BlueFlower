@@ -75,5 +75,6 @@ if (empty($_SESSION['id'])) {
 <script src="./js/addAnnouncementToCart.js"></script>
 <script src="./js/removeItemFromCart.js"></script>
 <script src="./js/activateAnn.js"></script>
+<script src="./js/seeNotifications.js"></script>
 
 </html>

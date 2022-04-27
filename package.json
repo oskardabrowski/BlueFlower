@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass Sass/main.scss css/styles.css -w",
     "server": "live-server --browser=firefox --port=8090",
+    "build:sass": "node-sass Sass/main.scss css/styles.css --output-style compressed",
     "start": "npm-run-all --parallel server sass"
   },
   "repository": {
