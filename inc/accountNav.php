@@ -10,9 +10,11 @@ $annnouncements = new Announcements();
 $notifiactions = json_decode($data->user_comments);
 $notnum = 0;
 
-foreach ($notifiactions as $n) {
-    $count = $n->count;
-    $notnum = $notnum + $count;
+if (!empty($notifiactions)) {
+    foreach ($notifiactions as $n) {
+        $count = $n->count;
+        $notnum = $notnum + $count;
+    }
 }
 
 try {

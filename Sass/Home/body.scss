@@ -1916,12 +1916,14 @@
         &-level1 {
           display: flex;
           width: 100%;
+
           justify-content: space-between;
           & > div {
             display: flex;
           }
           &-desc{
-            width: max-content;
+            width: auto;
+            overflow-wrap: break-word;
 
             & > span {
               color: blue;
@@ -1966,7 +1968,8 @@
             display: flex;
           }
           &-desc{
-            width: max-content;
+            width: auto;
+            overflow-wrap: break-word;
 
             & > span {
               color: blue;

@@ -12,13 +12,13 @@ $userData = $user->GetUserData($id);
 
 $type = $_POST['type'];
 $class = $_POST['class'];
-$title = $_POST['title'];
+$title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
 $general_image_name = $_FILES['general_image']['name'];
 $general_image_tmp = $_FILES['general_image']['tmp_name'];
 $general_image_size = $_FILES['general_image']['size'];
-$desc = $_POST['desc'];
+$desc = filter_var($_POST['desc'], FILTER_SANITIZE_STRING);
 $images = $_FILES['images'];
-$footer = $_POST['footer'];
+$footer = filter_var($_POST['footer'], FILTER_SANITIZE_STRING);
 
 $arrayImages = array();
 

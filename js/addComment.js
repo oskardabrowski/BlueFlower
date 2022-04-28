@@ -83,10 +83,13 @@ CommentSend.addEventListener('click', async function(e) {
             id = 1;
         }
 
+        const desc = CommentMessage.value;
+        desc.replace(/<[^>]*>?/gm, '');
+
         const newComment = {
             commentId: id,
             userId: UserId.value,
-            desc: CommentMessage.value,
+            desc: desc,
             subcomments: []
         }
         comments.push(newComment);
@@ -103,6 +106,7 @@ CommentSend.addEventListener('click', async function(e) {
         } else {
             notifications.push({annid: AnnId.value, count: 1});
         }
+
         UpdateNotifiaction(AnnUserId.value, JSON.stringify(notifications));
         UpdateComments(AnnId.value, JSON.stringify(comments));
     } else {
@@ -119,11 +123,14 @@ CommentSend.addEventListener('click', async function(e) {
             subcommentId = 1;
         }
 
+        const desc = CommentMessage.value;
+        desc.replace(/<[^>]*>?/gm, '');
+
         const newComment = {
             commentParentId: repeatId,
             subcommentId: subcommentId,
             userId: UserId.value,
-            desc: CommentMessage.value,
+            desc: desc,
         }
         comments.map((comment) => {
             if(comment.commentId == repeatId) {
@@ -143,6 +150,7 @@ CommentSend.addEventListener('click', async function(e) {
         } else {
             notifications.push({annid: AnnId.value, count: 1});
         }
+
         UpdateNotifiaction(AnnUserId.value, JSON.stringify(notifications));
         UpdateComments(AnnId.value, JSON.stringify(comments));
     }

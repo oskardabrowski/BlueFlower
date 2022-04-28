@@ -65,6 +65,7 @@ if (empty($_SESSION['id'])) {
 </body>
 <script src="./js/menu.js"></script>
 <script src="./js/cart.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
 <script src="./vendors/summernote/summernote.init.js"></script>
 <script src="./js/changeUserPhoto.js"></script>
 <script src="./js/removePhoto.js"></script>
@@ -76,5 +77,6 @@ if (empty($_SESSION['id'])) {
 <script src="./js/removeItemFromCart.js"></script>
 <script src="./js/activateAnn.js"></script>
 <script src="./js/seeNotifications.js"></script>
+<script src="./js/payment.js"></script>
 
 </html>

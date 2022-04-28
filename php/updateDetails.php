@@ -5,11 +5,11 @@ require '../models/Users.php';
 
 $user = new User();
 
-$email = $_POST['email'];
-$desc = $_POST['desc'];
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$desc = filter_var($_POST['desc'], FILTER_SANITIZE_STRING);
 $contact = $_POST['contact'];
 $id = $_POST['id'];
-$name = $_POST['name'];
+$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 
 if ($user->UpdateUserDetails($id, $email, $desc, $contact, $name)) {
     echo json_encode(['msg' => 'UPDATED']);

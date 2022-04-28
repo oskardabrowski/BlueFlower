@@ -23,7 +23,11 @@ $userData = $u[0];
 $user_contact = json_decode($userData->user_contact);
 $images = json_decode($data->ann_images);
 
-$currentUserId = $_SESSION['id'];
+if (isset($_SESSION['id'])) {
+    $currentUserId = $_SESSION['id'];
+} else {
+    $currentUserId = 'none';
+}
 
 $comments = json_decode($data->ann_comments);
 ?>

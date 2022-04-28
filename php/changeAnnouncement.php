@@ -10,7 +10,7 @@ $imagesAllUpload  = false;
 $user_id = $_POST['user_id'];
 $id = $_POST['id'];
 $class = $_POST['class'];
-$title = $_POST['title'];
+$title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
 
 $name = $_FILES['general_img']['name'];
 $tmp = $_FILES['general_img']['tmp_name'];
@@ -18,9 +18,9 @@ $size = $_FILES['general_img']['size'];
 
 $generalImgName = $name;
 
-$desc = $_POST['desc'];
+$desc = filter_var($_POST['desc'], FILTER_SANITIZE_STRING);
 $images = $_FILES['NewPhotos'];
-$footer = $_POST['footer'];
+$footer = filter_var($_POST['footer'], FILTER_SANITIZE_STRING);
 
 $ann = new Announcements();
 $data = $ann->SelectAnnouncementById($id);
