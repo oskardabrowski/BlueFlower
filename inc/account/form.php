@@ -3,20 +3,20 @@
     <form action="./php/addNewAnnouncement.php" method="POST" enctype="multipart/form-data">
         <label>Typ oferty: </label>
         <select name="type">
-            <option value="free">Free - darmowa</oprion>
-            <option value="standard">Standard</oprion>
-            <option value="premium">Premium</oprion>
+            <option value="free">Free - darmowa</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
         </select>
         <label>Klasa oferty: </label>
         <select name="class">
-            <option value="other">Inne</oprion>
-            <option value="cars">Samochody</oprion>
-            <option value="crypto">Kryptowaluty</oprion>
-            <option value="soft">Oprogramowanie</oprion>
-            <option value="electronic">Elektronika</oprion>
-            <option value="meal">Jedzenie</oprion>
-            <option value="clothes">Odzież</oprion>
-            <option value="agd">AGD</oprion>
+            <option value="other">Inne</option>
+            <option value="cars">Samochody</option>
+            <option value="crypto">Kryptowaluty</option>
+            <option value="soft">Oprogramowanie</option>
+            <option value="electronic">Elektronika</option>
+            <option value="meal">Jedzenie</option>
+            <option value="clothes">Odzież</option>
+            <option value="agd">AGD</option>
         </select>
         <label>Nazwa oferty: </label>
         <input type="text" name="title" placeholder="Samochód na sprzedaż" />
