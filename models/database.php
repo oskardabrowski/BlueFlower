@@ -1,6 +1,6 @@
 <?php
 define("DB_HOST", "localhost");
-define("DB_NAME", "BlueFlower");
+define("DB_NAME", "blueflower");
 define("DB_USER", "root");
 define("DB_PASSWORD", "");
 

@@ -1,13 +1,7 @@
 <?php
 $announcements = new Announcements();
 $user_ann;
-
-try {
-    $user_ann = $announcements->SelectAllAnnouncementsByUserUniq($data->user_uniq);
-} catch (Error) {
-    header('Loaction: account.php?page=announcements&code=error');
-}
-
+$user_ann = $announcements->SelectAllAnnouncementsByUserUniq($data->user_uniq);
 ?>
 
 

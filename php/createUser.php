@@ -10,16 +10,14 @@ $password = $_POST['password'];
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 $uniq = uniqid($email);
 
-try {
-    if (mkdir("../img/users/" . $uniq, 0777, true)) {
-        if ($user->CreateNewUser($email, $passwordHash, $uniq)) {
-            echo json_encode(['msg' => 'UserCreated']);
-        } else {
-            echo json_encode(['pass' => 'WrongInDb']);
-        }
+
+if (mkdir("../img/users/" . $uniq, 0777, true)) {
+    if ($user->CreateNewUser($email, $passwordHash, $uniq)) {
+        echo json_encode(['msg' => 'UserCreated']);
     } else {
-        echo json_encode(['pass' => 'WrongSomething']);
+        echo json_encode(['pass' => 'WrongInDb']);
     }
-} catch (Exception) {
+} else {
     echo json_encode(['pass' => 'WrongSomething']);
 }
+

@@ -10,17 +10,13 @@ $id = $_POST['id'];
 $user = new User();
 $userData = $user->GetUserData($id);
 
-try {
-    if (password_verify($current, $userData->user_password)) {
-        $newPassword = password_hash($new, PASSWORD_DEFAULT);
-        if ($user->UpdateUserPassword($id, $newPassword)) {
-            echo json_encode(['msg' => 'CHANGED']);
-        } else {
-            echo json_encode(['msg' => 'ERROR']);
-        }
+if (password_verify($current, $userData->user_password)) {
+    $newPassword = password_hash($new, PASSWORD_DEFAULT);
+    if ($user->UpdateUserPassword($id, $newPassword)) {
+        echo json_encode(['msg' => 'CHANGED']);
     } else {
         echo json_encode(['msg' => 'ERROR']);
     }
-} catch (Error) {
+} else {
     echo json_encode(['msg' => 'ERROR']);
 }

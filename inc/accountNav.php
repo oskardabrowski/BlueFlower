@@ -17,9 +17,9 @@ if (!empty($notifiactions)) {
     }
 }
 
-try {
+if($user->GetUserData($id)) {
     $data = $user->GetUserData($id);
-} catch (Exception) {
+} else {
     $error = true;
 }
 if (!empty($_GET['code'])) {
